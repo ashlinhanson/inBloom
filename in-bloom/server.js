@@ -1,10 +1,10 @@
 const express = require("express");
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 
 // Requires models folder for syncing
-const db = require("./models");
+var db = require("./models")
 
 // Set up express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
