@@ -1,13 +1,11 @@
 import React from "react";
-import Login from "./components/Login";
-import Logout from "./components/Logout";
+import Home from "./pages/Home";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Login/>
-      <Logout/>
+      <Home />
     </div>
   );
 }
