@@ -1,4 +1,5 @@
 import React from "react";
+import Navbarr from "../components/NavBar";
 import Login from "../components/Login";
 import Logout from "../components/Logout";
 
@@ -17,6 +18,10 @@ function Home() {
                 <h3 className="m-5">Create Account</h3>
                 <button className="btn btn-outline-success">Welcome!</button>
             </div>
+
+            <Navbarr />
+            <Login />
+            <Logout />
         </div>
     )
 }
