@@ -1,7 +1,7 @@
-import React from "react";
 import React, { useEffect } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { gsap, TimelineLite, Power3 } from 'gsap';
+import Logout from './Logout';
 
 function Navbarr() {
 
@@ -22,6 +22,7 @@ function Navbarr() {
                 <Nav.Link className="sub homes" href="/home">H O M E</Nav.Link>
                 <Nav.Link className="sub about" href="/about">A B O U T</Nav.Link>
                 <Nav.Link className="sub contact" href="/contact">C O N T A C T</Nav.Link>
+                <Logout/>
             </Nav>
         </Navbar>
 

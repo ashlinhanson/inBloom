@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import './App.css';
-import PlantsPage from "./pages/PlantsPage";
+import PlantsPage from "./pages/Garden";
 import NewUser from "./pages/NewUser";
 import SearchResults from "./pages/SearchResults";
 
