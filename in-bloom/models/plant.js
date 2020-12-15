@@ -149,5 +149,13 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     }
   });
+
+  Plant.associate = function(models) {
+    Plant.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Plant;
 };

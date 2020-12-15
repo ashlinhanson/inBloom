@@ -27,5 +27,11 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: true
       }
     });
+
+    User.associate = function(models) {
+        User.hasMany(models.Plant, {
+            onDelete: "cascade"
+        });
+    };
     return User;
   };
