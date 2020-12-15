@@ -8,12 +8,14 @@ function Home() {
 
     return(
         <div>
-            <div className="jumbotron">
-                <h1>In Bloom</h1>
-                </div>
-            <div className="card m-5 col-4 mx-auto">
-                <h3>Sign In</h3>
+            <div className="jumbotron text-center bg-success text-white">
+                <h1>inBloom</h1>
+            </div>
+            <div className="container m-5 col-4 mx-auto text-center">
+                <h3 className="m-5">Sign In</h3>
                 <Login />
+                <h3 className="m-5">Create Account</h3>
+                <button className="btn btn-outline-success">Welcome!</button>
             </div>
         </div>
     )
