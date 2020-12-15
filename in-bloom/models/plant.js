@@ -6,6 +6,7 @@ module.exports = function(sequelize, DataTypes) {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
       validate: {
         len: [1]
       }
@@ -35,7 +36,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     //main_species.distribution.native
     native: {
-      type: DataTypes.ARRAY,
+      type: DataTypes.JSON,
       allowNull: true
     },
     //main_species.flower.color
