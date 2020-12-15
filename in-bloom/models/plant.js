@@ -1,5 +1,3 @@
-// here, we'll use sequelize to export our data model in a similar way as 
-// the below code.  We'll rename the file later as well.
 
 module.exports = function(sequelize, DataTypes) {
   let Plant = sequelize.define("Plant", {
