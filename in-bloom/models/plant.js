@@ -149,5 +149,5 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     }
   });
-  return Post;
+  return Plant;
 };
