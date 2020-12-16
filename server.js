@@ -16,6 +16,7 @@ app.use(express.json());
 // API Route
 
 require("./routes/api-routes")(app);
+require("./routes/treffle-api")(app);
 
 
 //Sync sequelize models and start the Express app
