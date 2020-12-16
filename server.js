@@ -1,5 +1,6 @@
 const express = require("express");
 
+const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -10,14 +11,13 @@ var db = require("./models")
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Static Directory
-//app.use(express.static("public"));
+//Static Directory
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 // API Route
-
-require("./routes/api-routes")(app);
-require("./routes/treffle-api")(app);
-
+app.use(routes);
 
 //Sync sequelize models and start the Express app
 
