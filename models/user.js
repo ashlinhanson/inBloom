@@ -1,6 +1,12 @@
-
 module.exports = function(sequelize, DataTypes) {
+
   let User = sequelize.define("User", {
+    
+    id: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV1,
+      primaryKey: true
+    },
 
     firstName: {
       type: DataTypes.STRING,
@@ -19,8 +25,17 @@ module.exports = function(sequelize, DataTypes) {
     plants: {
       type: DataTypes.JSON,
       allowNull: true
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      defaultValue: DataTypes.NOW
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      defaultValue: DataTypes.NOW
     }
-
   });
 
   User.associate = function(models) {

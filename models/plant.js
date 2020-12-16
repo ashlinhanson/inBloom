@@ -1,7 +1,7 @@
 
 module.exports = function(sequelize, DataTypes) {
   let Plant = sequelize.define("Plant", {
-
+    
     common_name: {
       type: DataTypes.STRING,
       allowNull: false,
