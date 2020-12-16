@@ -10,11 +10,12 @@ module.exports = {
   },
 
   findById: function(req, res) {
-    db.User.find({
+    db.User.findAll({
       where: {
-        id: req.params
+        id: req.params.id
       }
-    }).then(function(dbModel) {
+    })
+      .then(function(dbModel) {
         res.json(dbModel);
     });
   },

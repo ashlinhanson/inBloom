@@ -7,5 +7,5 @@ router.route("/")
 
 router.route("/:id")
   .get(userController.findById);
-
+  
   module.exports = router;
