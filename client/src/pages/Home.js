@@ -14,11 +14,11 @@ function Home() {
             <div className="container m-5 col-4 mx-auto text-center">
                 <h3 className="m-5">Sign In</h3>
                 <Login />
-                <h3 className="m-5">Create Account</h3>
+                {/* <h3 className="m-5">Create Account</h3>
                 <button className="btn btn-outline-success">
                     <Link to={"/newuser"} />
                     Welcome
-                </button>
+                </button> */}
             </div>
         </div>
     )

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbarr from "../components/Navbarr"
+import Navbar from "../components/Navbar"
 
 function NewUser() {
 
     return(
         <div>
-            <Navbarr/>
+            <Navbar/>
         <div className="container">
             <h1 className="text-center m-2">Welcome to inBloom!</h1>
             <div className="input-group mb-3">
