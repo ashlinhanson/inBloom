@@ -1,5 +1,5 @@
-
 module.exports = function(sequelize, DataTypes) {
+
   let User = sequelize.define("User", {
 
     firstName: {
@@ -19,8 +19,17 @@ module.exports = function(sequelize, DataTypes) {
     plants: {
       type: DataTypes.JSON,
       allowNull: true
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      defaultValue: DataTypes.NOW
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      defaultValue: DataTypes.NOW
     }
-
   });
 
   User.associate = function(models) {
