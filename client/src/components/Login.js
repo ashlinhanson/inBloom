@@ -4,14 +4,12 @@ import { GoogleLogin } from 'react-google-login';
 
 const clientId = "21199057526-pc5p89vu1fos35ufcd9m597mmd84aq88.apps.googleusercontent.com";
 
-function Login() {
+import { refreshTokenSetup } from '../utils/refreshToken';
 
-    
-    
+function Login() {
     const onSuccess = (res) => {
         console.log("[Login Success] currentUser:", res.profileObj);
-
-
+        
     };
 
     const onFailure = (res) => {
@@ -21,6 +19,7 @@ function Login() {
 
     return (
         <div>
+            {/* the login button */}
             <GoogleLogin 
                 clientId={clientId}
                 buttonText="Login"

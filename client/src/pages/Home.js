@@ -6,14 +6,17 @@ function Home() {
     
     return(
         <div>
+            {/* the header of the homepage  */}
             <div className="jumbotron text-center bg-success text-white">
                 <h1>inBloom</h1>
                 <p className="lead">Let's Get Growing</p>
-
             </div>
+            {/* the google sign in button/established users */}
             <div className="container m-5 col-4 mx-auto text-center">
                 <h3 className="m-5">Sign In</h3>
                 <Login />
+
+                {/* this is will the new user button to trigger the new user routes */}
                 {/* <h3 className="m-5">Create Account</h3>
                 <button className="btn btn-outline-success">
                     <Link to={"/newuser"} />

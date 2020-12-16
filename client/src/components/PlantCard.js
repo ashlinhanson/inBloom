@@ -1,7 +1,4 @@
 import React from "react";
-import SoilInfoBtn from "./SoilInfoBtn";
-import WaterBtn from "./WaterBtn";
-import LightInfoBtn from "./LightInfoBtn";
 import MoreInfoBtn from "./MoreInfoBtn"
 
 function PlantCard(props) {
