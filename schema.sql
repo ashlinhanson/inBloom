@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS in_bloom;
+CREATE DATABASE in_bloom;
