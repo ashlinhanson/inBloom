@@ -1,15 +1,7 @@
-// here, we'll use sequelize to export our data model in a similar way as 
-// the below code.  We'll rename the file later as well.
 
 module.exports = function(sequelize, DataTypes) {
   let Plant = sequelize.define("Plant", {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
+
     common_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -35,7 +27,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     //main_species.distribution.native
     native: {
-      type: DataTypes.ARRAY,
+      type: DataTypes.JSON,
       allowNull: true
     },
     //main_species.flower.color
