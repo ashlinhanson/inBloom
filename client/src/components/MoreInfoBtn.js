@@ -11,3 +11,5 @@ function MoreInfoBtn() {
         
     )
 }
+
+export default MoreInfoBtn;

@@ -21,7 +21,8 @@ app.use(routes);
 
 //Sync sequelize models and start the Express app
 
-db.sequelize.sync({}).then(function() {
+db.sequelize.sync({ force: true }).then(function() {
+  require("./controller/plantsController.js")(app)
   app.listen(PORT, function() {
     console.log("App listening on PORT" + PORT);
   });
