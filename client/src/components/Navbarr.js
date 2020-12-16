@@ -1,7 +1,3 @@
-<<<<<<< HEAD:client/src/components/Navbarr.js
-=======
-// import React from "react";
->>>>>>> main:client/src/components/NavBar.js
 import React, { useEffect } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { gsap, TimelineLite, Power3 } from 'gsap';
