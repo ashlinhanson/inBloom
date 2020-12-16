@@ -12,9 +12,9 @@ function Garden() {
  
    function loadPlants() {
       API.getPlants()
-         .then(res =>
-            setPlants(res.data)
-         )
+         .then(res => {
+            setPlants({...plants, plants: res})
+         })
          .catch(err => console.log(err));
    };
    return (

@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { GoogleLogin } from 'react-google-login';
+import { refreshTokenSetup } from '../utils/refreshToken';
+
 
 const clientId = "21199057526-pc5p89vu1fos35ufcd9m597mmd84aq88.apps.googleusercontent.com";
 
-import { refreshTokenSetup } from '../utils/refreshToken';
 
 function Login() {
     const onSuccess = (res) => {

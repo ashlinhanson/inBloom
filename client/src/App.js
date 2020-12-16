@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import './App.css';
 import PlantsPage from "./pages/Garden";
 import NewUser from "./pages/NewUser";
-import SearchResults from "./pages/SearchResults";
 
 function App() {
   return (
@@ -20,9 +19,6 @@ function App() {
           </Route>
           <Route exact path={"/newuser"}>
             <NewUser />
-          </Route>
-          <Route exact path={"/search"}>
-            <SearchResults />
           </Route>
         </Switch>
       </div>

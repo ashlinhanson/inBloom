@@ -15,6 +15,13 @@ function Logout() {
             clientId={clientId}
             buttonText="Logout"
             onLogoutSuccess={onSuccess}
+            style={{
+                scope: "profile",
+                width: "240",
+                height: "50",
+                'longtitle': "true",
+                theme: "dark"
+            }}
         ></GoogleLogout>
         </div>
     );

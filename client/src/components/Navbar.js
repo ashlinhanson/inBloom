@@ -4,6 +4,12 @@ import Logout from './Logout';
 
 function Navbar() {
 
+    const [searchState, setSearchState] = useState({
+      plantName : " ",
+      searchResults : []
+    })
+
+
     let tl = new TimelineLite({ delay: 0.8 })
 
     useEffect(() => {
@@ -12,6 +18,17 @@ function Navbar() {
         tl.from('.search', { x: 15, opacity: 0, ease: Power3.easeOut, delay: 0.2 }, 'Start')
         tl.from('.contact', { x: 15, opacity: 0, ease: Power3.easeOut, delay: 0.3 }, 'Start')
     }, []);
+
+    function handleFormSubmit() {
+      API.searchPlantByName(searchState.plantName, (result, err) => {
+        if (!err) {
+          const searchResults = result.map((plant) => {
+            <option value={plant.plantName}></option>
+          })
+        }
+      })
+
+    };
 
 
     return (
@@ -24,10 +41,19 @@ function Navbar() {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item active search">
-              <a className="nav-link" href="#">Search<span className="sr-only">(current)</span></a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Add A Plant</a>
+            <form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                  <label for="plantSearch" class="sr-only">Search : </label>
+                  <input type="search" class="form-control" id="plantSearch" placeholder="Search by plant name..."/>
+                </div>
+                <button 
+                  type="submit" 
+                  class="btn btn-success mb-2 mx-4"
+                  onClick={handleFormSubmit}
+                  >
+                    Search Plants
+                </button>
+            </form>
             </li>
             <li className="nav-item contact">
               <Logout />
