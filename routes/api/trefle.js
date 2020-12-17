@@ -4,9 +4,6 @@ const dbController = require("../../controllers/trefleController");
 router.route("/search/:plantName")
   .get(trefleController.searchPlants);
 
-router.route("/garden")
-  .get(trefleController.listPlants)
-  
 router.route("/plant/:id")
   .get(trefleController.plantDetail)
   
