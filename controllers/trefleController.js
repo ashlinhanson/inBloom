@@ -1,30 +1,31 @@
 const axios = require('axios');
 
-const trefleAPI = (app, process) => {
-    let searchPlants = app.get("/search/:plantName", (req, res) => {
-        const plantName = req.params.plantName;
+module.exports = {
+    searchPlants: function (req,res){
+        const { query: params} = req;
         const Url = `https://trefle.io/api/v1/plants/search?q=${plantName}/?token=${process.env.TREFFLE_KEY}`;
-        
 
-        axios.get(Url).then((result) => {
+        axios
+        .get(Url)
+        .then((result) => {
             res.json(result.data.items);
         }).catch(err => {
             console.log(err);
         });
-    });
+    },
 
-    let listPlants = app.get("/garden", (req, res) => {
+    listPlants: function (req, res){ 
         const Url = `https://trefle.io/api/v1/plants?token=${process.env.TREFFLE_KEY}`;
-        
 
-        axios.get(Url).then((result) => {
+        axios.get(Url)
+        .then((result) => {
             res.json(result.data.items);
         }).catch(err => {
             console.log(err);
         });
-    });
+    },
 
-    let plantDetail = app.get("/plant/:id", (req, res) => {
+    plantDetail : function (req, res) {
         const plantID = req.params.id;
         const Url = `https://trefle.io/api/v1/plants/${plantId}?token=${TREFFLE_KEY}`;
         
@@ -34,7 +35,7 @@ const trefleAPI = (app, process) => {
         }).catch(err => {
             console.log(err);
         });
-    });
+    }
 }
 
-module.exports = trefleAPI;
+module.exports = trefleController;
