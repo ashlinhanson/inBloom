@@ -16,12 +16,16 @@ function Home() {
                 <h3 className="m-5">Sign In</h3>
                 <Login />
 
+
+                {/* Not needed for MVP */}
                 {/* this is will the new user button to trigger the new user routes */}
                 {/* <h3 className="m-5">Create Account</h3>
                 <button className="btn btn-outline-success">
                     <Link to={"/newuser"} />
                     Welcome
                 </button> */}
+
+                
             </div>
         </div>
     )
