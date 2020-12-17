@@ -1,6 +1,6 @@
 import React from "react";
 
-function AddBtn() {
+function AddPlantBtn() {
     return (
         <div>
             <button className="btn">Add to Your Garden</button>
@@ -9,4 +9,4 @@ function AddBtn() {
 
 }
 
-export default AddBtn;
+export default AddPlantBtn;

@@ -1,4 +1,9 @@
 import React from "react";
+import AddPlantBtn from "./AddPlantBtn";
+import GrowthInfoBtn from "./GrowthInfoBtn";
+import LightInfoBtn from "./LightInfoBtn";
+import SoilInfoBtn from "./SoilInfoBtn";
+import WaterCareBtn from "./WaterCareBtn";
 
 function PlantInfo() {
  
@@ -13,7 +18,7 @@ function PlantInfo() {
         <SoilInfoBtn/>
         <LightInfoBtn/>
         <GrowthInfoBtn/>
-        <button className="btn btn-success">Add to you garden</button>
+        <AddPlantBtn/>
     </div>
  )
 
