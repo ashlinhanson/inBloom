@@ -7,7 +7,13 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: DataTypes.UUIDV1,
       primaryKey: true
     },
-
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,

@@ -2,10 +2,10 @@ const db = require("../models");
 
 module.exports = {
 
-  findById: function(req, res) {
+  findByEmail: function(req, res) {
     db.User.findOne({
       where: {
-        id: req.params.id
+        email: req.params.email
       }
     })
       .then(function(dbModel) {

@@ -7,33 +7,51 @@ let { each } = require("bluebird");
 const dotenv = require("dotenv");
 const config = require("../config/config.json")
 dotenv.config();
-
+const TREFFLE_KEY = process.env.TREFFLE_KEY;
 module.exports = function () {
 
-    function getTreffleInfo(){
-        let results = '';
-        TREFFLE_KEY = process.env.TREFFLE_KEY;
-        const options = {
-            method: 'get',
-            url: `https://trefle.io/api/v1/plants/?q=${TREFFLE_KEY}`,
-        };
-        try {
-            results = axios(options);
+    async function getTreffleInfo(){
+        try {    
+            const results = await axios.get(`https://trefle.io/api/v1/plants?token=${TREFFLE_KEY}`);
+            if (results){ 
+                return results.data;
+                
+            } else {
+                console.log('No results for your plant');
+            };
         } catch (error) {
             console.log(error);
         };
-    
-        if (results){ 
-            return results.data;
-        } else {
-            console.log('No results for your plant');
-        };
-    
+        console.log(results)
+        return results.data;
+    }
+
+    function findPlants (results) {
+        let res;
+        results.data.map( plant => {
+            async function getPlants (){
+                try{
+                    console.log(`https://trefle.io/api/v1/plants/${plant.id}?token=${TREFFLE_KEY}`)
+                    res = await axios.get(`https://trefle.io/api/v1/plants/${plant.id}?token=${TREFFLE_KEY}`);
+
+                    // console.log(res)
+                    return res.data.data;
+
+                } catch (error) {
+                    console.log(error)
+                }
+                return res.data
+            }
+            res = getPlants()
+        })
+        return res;
     }
 
     function plantParse (data){
+        
         plantData = [];
         entry = {};
+        console.log("DATA" + data)
         for(each of data.data){
             entry = {'common_name': each.common_name, 
                 'scientific_name': each.scientific_name, 
@@ -68,8 +86,9 @@ module.exports = function () {
         db.Plants.bulkCreate(plantData)
     };
 
-    const init = () => {
-        plants = getTreffleInfo()
+    async function init() {
+        allPlants = await getTreffleInfo()
+        plants = await findPlants(allPlants)
         plantParse(plants)
     }
 
