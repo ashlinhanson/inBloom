@@ -2,11 +2,9 @@
 module.exports = function(sequelize, DataTypes) {
   let Plant = sequelize.define("Plant", {
     id: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV1,
+      primaryKey: true
     },
     common_name: {
       type: DataTypes.STRING,

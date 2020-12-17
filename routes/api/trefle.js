@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const dbController = require("../../controllers/trefleController");
+const trefleController = require("../../controllers/trefleController");
 
 router.route("/search/:plantName")
   .get(trefleController.searchPlants);
