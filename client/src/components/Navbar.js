@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { gsap, TimelineLite, Power3 } from 'gsap';
 import Logout from './Logout';
+import API from '../utils/API';
 
 function Navbar() {
 
@@ -19,16 +20,16 @@ function Navbar() {
         tl.from('.contact', { x: 15, opacity: 0, ease: Power3.easeOut, delay: 0.3 }, 'Start')
     }, []);
 
-    function handleFormSubmit() {
-      API.searchPlantByName(searchState.plantName, (result, err) => {
-        if (!err) {
-          const searchResults = result.map((plant) => {
-            <option value={plant.plantName}></option>
-          })
-        }
-      })
+    // function handleFormSubmit() {
+    //   API.searchPlants(searchState.plantName, (result, err) => {
+    //     if (!err) {
+    //       const searchResults = result.map((plant) => {
+    //         <option value={plant.plantName}></option>
+    //       })
+    //     }
+    //   })
 
-    };
+    // };
 
 
     return (
@@ -49,7 +50,7 @@ function Navbar() {
                 <button 
                   type="submit" 
                   class="btn btn-success mb-2 mx-4"
-                  onClick={handleFormSubmit}
+                  // onClick={handleFormSubmit}
                   >
                     Search Plants
                 </button>
