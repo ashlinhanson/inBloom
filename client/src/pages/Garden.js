@@ -13,7 +13,7 @@ function Garden() {
    // }, [])
  
    // function handleGetPlants() {
-   //    API.getPlants(results => {
+   //    API.findByEmail(results => {
    //       setPlants({ ...plants, savedPlants: results });
    //   });
    // };
