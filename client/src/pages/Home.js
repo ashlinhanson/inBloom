@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Login from "../components/Login";
-import header from "../images/header.svg";
+import header from "../images/header3.png";
 
 
 function Home() {
