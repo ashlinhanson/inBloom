@@ -4,14 +4,16 @@ import PlantCard from "../components/PlantCard";
 import API from "../utils/API";
 
 function Garden() {
-   // const [plants, setPlants] = useState([]);
+   // const [plants, setPlants] = useState([
+   //    savedPlants: [];
+   // ]);
    
    // useEffect(() => {
-   //    loadPlants()
+   //    handleGetPlants()
    // }, [])
  
-   // function loadPlants() {
-   //    API.getPlants()
+   // function handleGetPlants() {
+   //    API.getPlants(results =>)
    //       .then(res => {
    //          setPlants({...plants, plants: res})
    //       })

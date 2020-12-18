@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Login from "../components/Login";
 import header from "../images/header.svg";
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 function Home() {
     
@@ -15,7 +15,8 @@ function Home() {
             {/* the google sign in button/established users */}
             <div className="container m-5 col-4 mx-auto text-center">
                 <h3 className="lead m-5">Sign In</h3>
-                {/* <Login /> */}
+                
+                <Login />
 
 
                 {/* Not needed for MVP */}
@@ -26,7 +27,7 @@ function Home() {
                     Welcome
                 </button> */}
 
-                
+
             </div>
         </div>
     )
