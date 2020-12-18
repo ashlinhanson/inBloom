@@ -11,6 +11,11 @@ body {
   background-color: rgb(255, 242, 226) !important;
 }
 
+.lead {
+  font-family: 'Montserrat', sans-serif;
+  }
+  
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
