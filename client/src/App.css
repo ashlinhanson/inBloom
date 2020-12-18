@@ -2,9 +2,16 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgb(251, 240, 225) !important;
+}
+
+.lead {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.jumbotron {
+  background-color: rgb(251, 240, 225) !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,6 +33,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+
+.inbloom {
+  width: 50%;
 }
 
 @keyframes App-logo-spin {
