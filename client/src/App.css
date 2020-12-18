@@ -32,6 +32,33 @@ body {
     }
   
 
+.monstera {
+  width: 60%;
+  position: absolute;
+  z-index: 10;
+  margin-top: 20%;
+   animation-duration: 10s;
+    animation-name: goRight;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes goRight {
+    from {
+      transform: 
+      translate(-0,0)
+      rotate(0deg);
+    
+    }
+  
+    to {
+      transform: 
+      translate(-400px,400px)
+      rotate(-85deg);
+      opacity: 100%;
+
+    }
+  }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

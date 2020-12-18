@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Login from "../components/Login";
 import header from "../images/header3.png";
-
+import monstera1 from "../images/monstera1.png"
 
 function Home() {
     
     return(
         <div>
+            <img className="monstera" src={monstera1}></img>
             {/* the header of the homepage  */}
             <div className="jumbotron bg-transparent text-center">
                 <img className="inbloom" src={header}></img>
