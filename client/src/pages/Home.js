@@ -9,7 +9,7 @@ function Home() {
         <div>
             {/* the header of the homepage  */}
             <div className="jumbotron text-center">
-                <img src={header}></img>
+                <img className="inbloom" src={header}></img>
                 <p className="lead mt-5">Let's Get Growing</p>
             </div>
             {/* the google sign in button/established users */}
