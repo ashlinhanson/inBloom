@@ -16,7 +16,8 @@ function Home() {
             <div className="container m-5 col-4 mx-auto text-center">
                 <h3 className="lead m-5">Sign In</h3>
                 
-                <Login />
+                <Login 
+                />
 
 
                 {/* Not needed for MVP */}
