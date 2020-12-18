@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Login from "../components/Login";
+import header from "../images/header.svg";
 
 function Home() {
     
@@ -8,7 +9,7 @@ function Home() {
         <div>
             {/* the header of the homepage  */}
             <div className="jumbotron text-center bg-success text-white">
-                <h1>inBloom</h1>
+                <img src={header}></img>
                 <p className="lead">Let's Get Growing</p>
             </div>
             {/* the google sign in button/established users */}
