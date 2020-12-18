@@ -5,7 +5,7 @@ router.route("/")
   .post(userController.create)
 
 router.route("/:id")
-  .get(userController.findById)
+  .get(userController.findByEmail)
   .delete(userController.remove);
   
   module.exports = router;
