@@ -8,21 +8,56 @@
 }
 
 body {
-  background-color: rgb(255, 242, 226) !important;
+  background-image: url("../src/images/asset-7.png");
 }
 
+.sublead {
+  font-family: 'Lobster', cursive;
+  font-size: 1.8rem !important;
+  color: rgb(63, 63, 63) !important;
+  }
+
 .lead {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem !important;
+  color: rgb(68, 68, 68);
   }
 
 .jumbotron {
-    background-color: rgb(251, 240, 225) !important;
+    background: none !important;
     }
     
 .inbloom {		
-    width: 50%;
+    width: 60%;
     }
   
+
+.monstera {
+  width: 60%;
+  position: absolute;
+  z-index: 10;
+  margin-top: 20%;
+   animation-duration: 10s;
+    animation-name: goRight;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes goRight {
+    from {
+      transform: 
+      translate(-0,0)
+      rotate(0deg);
+    
+    }
+  
+    to {
+      transform: 
+      translate(-400px,400px)
+      rotate(-85deg);
+      opacity: 100%;
+
+    }
+  }
 
 
 @media (prefers-reduced-motion: no-preference) {
