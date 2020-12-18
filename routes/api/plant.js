@@ -1,11 +1,11 @@
 const router = require("express").Router();
-const dbController = require("../../controllers/dbController");
+const plantsController = require("../../controllers/plantController");
 
 router.route("/")
-  .post(dbController.create);
+  .post(plantsController.create);
 
 router.route("/:id")
-  .get(dbController.findById)
-  .delete(dbController.remove);
+  .get(plantsController.findById)
+  .delete(plantsController.remove);
   
   module.exports = router;
