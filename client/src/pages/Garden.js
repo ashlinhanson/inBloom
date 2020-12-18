@@ -13,11 +13,9 @@ function Garden() {
    // }, [])
  
    // function handleGetPlants() {
-   //    API.getPlants(results =>)
-   //       .then(res => {
-   //          setPlants({...plants, plants: res})
-   //       })
-   //       .catch(err => console.log(err));
+   //    API.getPlants(results => {
+   //       setPlants({ ...plants, savedPlants: results });
+   //   });
    // };
    return (
       <div>
@@ -27,7 +25,7 @@ function Garden() {
          <Navbar /> 
         {/* <div className="container p-3 mb-5 rounded text-center mx-auto" style={{width: "fit-content"}}>
             {plants.map(plant => (
-               <PlantCard plant={plants} />
+               <PlantCard plant={setPlants.savedPlants} />
             ))}
         </div> */}
       </div>
