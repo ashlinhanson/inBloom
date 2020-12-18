@@ -16,6 +16,16 @@ module.exports = function(sequelize, DataTypes) {
     image_url: {
       type: DataTypes.STRING,
       allowNull: true
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      defaultValue: DataTypes.NOW
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      defaultValue: DataTypes.NOW
     }
   });
 
