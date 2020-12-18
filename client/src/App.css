@@ -14,7 +14,11 @@ body {
 .lead {
   font-family: 'Montserrat', sans-serif;
   }
-  
+
+.jumbotron {
+    background-color: rgb(251, 240, 225) !important;
+    }
+    
 
 
 @media (prefers-reduced-motion: no-preference) {
