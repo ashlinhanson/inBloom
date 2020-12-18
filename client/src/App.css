@@ -19,6 +19,10 @@ body {
     background-color: rgb(251, 240, 225) !important;
     }
     
+.inbloom {		
+    width: 50%;
+    }
+  
 
 
 @media (prefers-reduced-motion: no-preference) {
