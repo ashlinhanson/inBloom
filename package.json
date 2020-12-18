@@ -11,6 +11,7 @@
     "express": "^4.17.1",
     "if-env": "^1.0.4",
     "mysql2": "^2.2.5",
+    "passport-google-oauth20": "^2.0.0",
     "sequelize": "^6.3.5"
   },
   "scripts": {

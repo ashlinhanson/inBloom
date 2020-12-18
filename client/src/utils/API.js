@@ -6,5 +6,9 @@ export default {
   },
   plantDetail: function(id) {
     return axios.get("/plant/" + id);
+  },
+  findByEmail: function (email) {
+    return axios.get()
   }
+
 };

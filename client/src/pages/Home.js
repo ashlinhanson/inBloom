@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Login from "../components/Login";
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import header from "../images/header3.png";
 import monstera1 from "../images/monstera1.png"
+
 
 function Home() {
     
@@ -17,7 +18,9 @@ function Home() {
             {/* the google sign in button/established users */}
             <div className="container m-5 col-4 mx-auto text-center">
                 <h3 className="lead m-5">Sign In</h3>
-                {/* <Login /> */}
+                
+                <Login 
+                />
 
 
                 {/* Not needed for MVP */}
@@ -28,7 +31,7 @@ function Home() {
                     Welcome
                 </button> */}
 
-                
+
             </div>
         </div>
     )

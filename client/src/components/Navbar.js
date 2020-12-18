@@ -5,10 +5,10 @@ import API from '../utils/API';
 
 function Navbar() {
 
-    const [searchState, setSearchState] = useState({
-      plantName : " ",
-      searchResults : []
-    })
+    // const [searchState, setSearchState] = useState({
+    //   plantName : " ",
+    //   searchResults : []
+    // })
 
 
     let tl = new TimelineLite({ delay: 0.8 })
