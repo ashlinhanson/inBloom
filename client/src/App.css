@@ -7,6 +7,24 @@
   pointer-events: none;
 }
 
+body {
+  background-color: rgb(255, 242, 226) !important;
+}
+
+.lead {
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.jumbotron {
+    background-color: rgb(251, 240, 225) !important;
+    }
+    
+.inbloom {		
+    width: 50%;
+    }
+  
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

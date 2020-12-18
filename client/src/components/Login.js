@@ -4,13 +4,12 @@ import { GoogleLogin } from 'react-google-login';
 import API from "../utils/API";
 // import { refreshTokenSetup } from '../utils/refreshToken';
 
-
 const clientId = "21199057526-pc5p89vu1fos35ufcd9m597mmd84aq88.apps.googleusercontent.com";
 
 
 function Login() {
     const onSuccess = (res) => {
-        console.log("[Login Success] currentUser:", res.profileObj);
+        console.log("[Login Success] currentUser:", res.profileObj)
         let userEmail = res.profileObj.email;
         
     };

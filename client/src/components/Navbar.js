@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { gsap, TimelineLite, Power3 } from 'gsap';
 import Logout from './Logout';
+import API from '../utils/API';
 
 function Navbar() {
 
@@ -20,7 +21,7 @@ function Navbar() {
     }, []);
 
     // function handleFormSubmit() {
-    //   API.searchPlantByName(searchState.plantName, (result, err) => {
+    //   API.searchPlants(searchState.plantName, (result, err) => {
     //     if (!err) {
     //       const searchResults = result.map((plant) => {
     //         <option value={plant.plantName}></option>
