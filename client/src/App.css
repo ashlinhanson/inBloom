@@ -8,15 +8,23 @@
 }
 
 body {
-  background-color: rgb(255, 242, 226) !important;
+  background-image: url("../src/images/asset-7.png");
 }
 
+.sublead {
+  font-family: 'Lobster', cursive;
+  font-size: 1.8rem !important;
+  color: rgb(63, 63, 63) !important;
+  }
+
 .lead {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem !important;
+  color: rgb(68, 68, 68);
   }
 
 .jumbotron {
-    background-color: rgb(251, 240, 225) !important;
+    background: none !important;
     }
     
 .inbloom {		
