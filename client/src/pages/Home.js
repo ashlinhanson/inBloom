@@ -8,9 +8,9 @@ function Home() {
     return(
         <div>
             {/* the header of the homepage  */}
-            <div className="jumbotron text-center bg-success text-white">
+            <div className="jumbotron text-center">
                 <img src={header}></img>
-                <p className="lead">Let's Get Growing</p>
+                <p className="lead mt-5">Let's Get Growing</p>
             </div>
             {/* the google sign in button/established users */}
             <div className="container m-5 col-4 mx-auto text-center">
