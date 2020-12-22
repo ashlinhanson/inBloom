@@ -15,16 +15,18 @@ function Login(props) {
     const onSuccess = (res) => {
         console.log("[Login Success] currentUser:", res.profileObj)
         let userEmail = res.profileObj.email;
+        console.log(res);
         // without authentication on the backend
         // make api call to /api/loogin db.user.findone if one doesn't exist with googleid pass profileobj to backend and create a user with google info from state. if there is respond true, don't create new one. 
         // in callback function from api, run line below (21) to update state
-        props.setUser(res.profileObj);
+        // props.setUser(res.profileObj);
 
 // this is incorporating the backend
 
-// API.signInUser().then(res=>{
-//     props.setUser(res.profileObj);
-// })
+// in future, only pass the token id @ 27 for server side authentication
+API.signInUser(res.profileObj).then(res=>{
+    props.setUser(res.data);
+})
         
     };
 
