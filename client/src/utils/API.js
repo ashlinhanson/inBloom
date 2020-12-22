@@ -9,6 +9,10 @@ export default {
   },
   findByEmail: function (email) {
     return axios.get()
+  },
+
+  signInUser: function (userData) {
+    return axios.post("/api/user", userData)
   }
 
 };

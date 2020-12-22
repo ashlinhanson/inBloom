@@ -14,10 +14,29 @@ module.exports = {
   },
 
   create: function(req, res) {
-    db.User.create(req.body) 
+    // in future, authenticate with google here
+    
+    db.User.findOne({
+      where: {
+        googleId: req.body.googleId
+      }
+    })
       .then(function(dbModel) {
-        res.json(dbModel);
-      });
+        if(dbModel){
+          res.json(dbModel);
+        }
+        else {
+          db.User.create({
+            googleId: req.body.googleId,
+            firstName: req.body.givenName,
+            lastName: req.body.familyName,
+            email: req.body.email
+          }) 
+            .then(function(dbModel) {
+              res.json(dbModel);
+          });
+        }
+      })
   },
 
   remove: function(req, res) {

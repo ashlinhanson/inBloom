@@ -26,7 +26,7 @@ function Home(props) {
             </div>
             {/* the google sign in button/established users */}
             <div className="container m-5 col-4 mx-auto text-center">
-                <h3 className="lead m-5">Sign In</h3>
+                {/* <h3 className="lead m-5">Sign In</h3> */}
                 
                { !props.user && <Login setUser={props.setUser} />  }
 

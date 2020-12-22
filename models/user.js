@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     // this is how we determine whether or not they exist
     googleId: {
-      type: string,
+      type: DataTypes.STRING,
       allowNull: false
     },
     email: {
