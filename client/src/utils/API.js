@@ -10,7 +10,7 @@ export default {
   findByEmail: function (email) {
     return axios.get()
   },
-
+  // post request using userData from google
   signInUser: function (userData) {
     return axios.post("/api/user", userData)
   }

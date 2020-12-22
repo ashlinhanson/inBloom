@@ -14,8 +14,8 @@ module.exports = {
   },
 
   create: function(req, res) {
-    // in future, authenticate with google here
-    
+    // in future, authenticate with google here for server side authentication
+
     db.User.findOne({
       where: {
         googleId: req.body.googleId

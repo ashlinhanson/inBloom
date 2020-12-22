@@ -22,7 +22,8 @@ function Login(props) {
         // props.setUser(res.profileObj);
 
 // this is incorporating the backend
-// in future, only pass the token id @ 26
+
+// in future, only pass the token id @ 27 for server side authentication
 API.signInUser(res.profileObj).then(res=>{
     props.setUser(res.data);
 })
