@@ -7,6 +7,11 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: DataTypes.UUIDV1,
       primaryKey: true
     },
+    // this is how we determine whether or not they exist
+    googleId: {
+      type: string,
+      allowNull: false
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
