@@ -33,10 +33,6 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    plants: {
-      type: DataTypes.JSON,
-      allowNull: true
-    },
     createdAt: {
       type: DataTypes.DATE,
       allowNull: true,

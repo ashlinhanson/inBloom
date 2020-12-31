@@ -6,7 +6,9 @@ module.exports = {
     db.User.findOne({
       where: {
         id: req.params.id
-      }
+      },
+      include : [db.Plant],
+      attributes: {exclude : ["googleId", "createdAt", "updatedAt"]}
     })
       .then(function(dbModel) {
         res.json(dbModel);
@@ -49,6 +51,8 @@ module.exports = {
         res.json("Removed " + dbModel + " from database")
       });
   }
+
+
 }
 
  
