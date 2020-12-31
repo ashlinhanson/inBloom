@@ -3,13 +3,15 @@ import Navbar from "../components/Navbar";
 import PlantCard from "../components/PlantCard";
 import API from "../utils/API";
 
-function Garden() {
+function Garden(props) {
    // const [plants, setPlants] = useState([
    //    savedPlants: [];
    // ]);
+
+   // const [user, setUser] = useState([]);
    
    // useEffect(() => {
-   //    handleGetPlants()
+   //    setUser = props.user
    // }, [])
  
    // function handleGetPlants() {
