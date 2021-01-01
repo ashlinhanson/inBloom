@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: url("../src/images/asset-7.png");
+  background-color: #f8f0d7;
 }
 
 .sublead {
@@ -28,7 +28,7 @@ body {
     }
     
 .inbloom {		
-    width: 60%;
+    width: 40%;
     }
   
 
