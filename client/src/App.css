@@ -32,7 +32,7 @@ body {
     }
   
 
-.monstera {
+/* .monstera {
   width: 60%;
   position: absolute;
   z-index: 10;
@@ -57,7 +57,7 @@ body {
       opacity: 100%;
 
     }
-  }
+  } */
 
 
 @media (prefers-reduced-motion: no-preference) {
