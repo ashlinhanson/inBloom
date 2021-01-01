@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import debounce from "lodash.debounce";
 import { gsap, TimelineLite, Power3 } from 'gsap';
 import Logout from './Logout';
 import API from '../utils/API';
@@ -9,6 +10,27 @@ function Navbar() {
     //   plantName : " ",
     //   searchResults : []
     // })
+
+    const [searchTerm, setSearchTerm] = useState('');
+    const [results, setResults] = useState([]);
+    const [isSearching, setIsSearching] = useState(false);
+
+    const debouncedSearchTerm = debounce(searchTerm, 500);
+
+    useEffect(
+      () => {
+        if (debouncedSearchTerm) {
+          setIsSearching(true);
+          API(debouncedSearchTerm).then(results => {
+            setIsSearching(false);
+            setResults(results);
+          });
+        } else {
+          setResults([]);
+        }
+      },
+      [debouncedSearchTerm]
+    );
 
 
     let tl = new TimelineLite({ delay: 0.8 })
@@ -45,15 +67,21 @@ function Navbar() {
             <form class="form-inline">
                 <div class="form-group mx-sm-3 mb-2">
                   <label for="plantSearch" class="sr-only">Search : </label>
-                  <input type="search" class="form-control" id="plantSearch" placeholder="Search by plant name..."/>
+                  <input type="search" class="form-control" id="plantSearch" placeholder="Search by plant name..." onchange={e => setSearchTerm(e.target.value)}/>
+                  {isSearching && <div>Searching...</div>}
+                  {results.map(result => (
+                    <div key={result.id}>
+                      <h4>{result.name}</h4>
+                    </div>
+                  ))}
                 </div>
-                <button 
+                {/* <button 
                   type="submit" 
                   class="btn btn-success mb-2 mx-4"
                   // onClick={handleFormSubmit}
                   >
                     Search Plants
-                </button>
+                </button> */}
             </form>
             </li>
             <li className="nav-item contact">
