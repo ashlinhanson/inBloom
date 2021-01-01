@@ -22,7 +22,7 @@ function Home(props) {
             {/* the header of the homepage  */}
             <div className="jumbotron bg-transparent text-center">
                 <img className="inbloom" src={inbloom}></img>
-                <p className="sublead mt-5">Let's Get Growing</p>
+                
             </div>
             {/* the google sign in button/established users */}
             <div className="container m-5 col-4 mx-auto text-center">
