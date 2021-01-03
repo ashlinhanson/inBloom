@@ -1,5 +1,5 @@
 const express = require("express");
-
+// const cors = require("cors");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -7,7 +7,16 @@ const PORT = process.env.PORT || 3001;
 // Requires models folder for syncing
 var db = require("./models")
 
+// const corsOptions = {
+//   Access-Control-Allow-Origin: * 
+// }
+
 // Set up express app to handle data parsing
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+})
+// app.options('*', cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

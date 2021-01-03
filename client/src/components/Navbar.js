@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import debounce from "lodash.debounce";
+import useDebounce from "./use-debounce";
 import { gsap, TimelineLite, Power3 } from 'gsap';
 import Logout from './Logout';
 import API from '../utils/API';
@@ -10,25 +10,48 @@ function Navbar() {
     //   plantName : " ",
     //   searchResults : []
     // })
-
+    // State and setter for search term
     const [searchTerm, setSearchTerm] = useState('');
+    // State and setter for search results
     const [results, setResults] = useState([]);
+    // State for search status (whether there is a pending API request)
     const [isSearching, setIsSearching] = useState(false);
 
-    const debouncedSearchTerm = debounce(searchTerm, 500);
+    // Now we call our hook, passing in the current searchTerm value.
+    // The hook will only return the latest value (what we passed in) ...
+    // ... if it's been more than 500ms since it was last called.
+    // Otherwise, it will return the previous value of searchTerm.
+    // The goal is to only have the API call fire when user stops typing ...
+    // ... so that we aren't hitting our API rapidly.
+    const debouncedSearchTerm = useDebounce(searchTerm, 500);
 
+    // Here's where the API call happens
+    // We use useEffect since this is an asynchronous action
     useEffect(
       () => {
+        const plantName = debouncedSearchTerm;
+        console.log("FUCKING PLANT NAME" + plantName)
+        // Make sure we have a value (user has entered something in input)
         if (debouncedSearchTerm) {
+          console.log("STUPID RESULTS" + debouncedSearchTerm);
+          // Set isSearching state
           setIsSearching(true);
-          API(debouncedSearchTerm).then(results => {
+          // Fire off our API call
+          API.searchPlants(plantName).then(results => {
+            // Set back to false since request finished
             setIsSearching(false);
+            // Set results state
             setResults(results);
           });
         } else {
           setResults([]);
         }
+
       },
+      // This is the useEffect input array
+      // Our useEffect function will only execute if this value changes ...
+      // ... and thanks to our hook it will only change if the original ...
+      // value (searchTerm) hasn't changed for more than 500ms.
       [debouncedSearchTerm]
     );
 
@@ -64,15 +87,16 @@ function Navbar() {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item active search">
-            <form class="form-inline">
-                <div class="form-group mx-sm-3 mb-2">
-                  <label for="plantSearch" class="sr-only">Search : </label>
-                  <input type="search" class="form-control" id="plantSearch" placeholder="Search by plant name..." onchange={e => setSearchTerm(e.target.value)}/>
+            <form className="form-inline">
+                <div className="form-group mx-sm-3 mb-2">
+                  <label htmlFor="plantSearch" className="sr-only">Search : </label>
+                  <input type="search" className="form-control" id="plantSearch" placeholder="Search by plant name..." onChange={e => setSearchTerm(e.target.value)}/>
                   {isSearching && <div>Searching...</div>}
                   {results.map(result => (
-                    <div key={result.id}>
-                      <h4>{result.name}</h4>
+                    <div key={result.data.id}>
+                      <h4>{result.data.name}</h4>
                     </div>
+                    // {console.log(results)}
                   ))}
                 </div>
                 {/* <button 

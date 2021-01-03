@@ -21,8 +21,8 @@ function Garden(props) {
    // };
    return (
       <div>
-         <div class="jumbotron bg-success">
-            <h1 class="display-3 text-center">Your Garden</h1>
+         <div className="jumbotron bg-success">
+            <h1 className="display-3 text-center">Your Garden</h1>
          </div>
          <Navbar /> 
         {/* <div className="container p-3 mb-5 rounded text-center mx-auto" style={{width: "fit-content"}}>
