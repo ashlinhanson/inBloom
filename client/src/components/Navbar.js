@@ -4,7 +4,7 @@ import { gsap, TimelineLite, Power3 } from 'gsap';
 import Logout from './Logout';
 import API from '../utils/API';
 
-function Navbar() {
+function Navbar(props) {
 
     // const [searchState, setSearchState] = useState({
     //   plantName : " ",
@@ -12,8 +12,7 @@ function Navbar() {
     // })
     // State and setter for search term
     const [searchTerm, setSearchTerm] = useState('');
-    // State and setter for search results
-    const [results, setResults] = useState([]);
+  
     // State for search status (whether there is a pending API request)
     const [isSearching, setIsSearching] = useState(false);
 
@@ -30,7 +29,7 @@ function Navbar() {
     useEffect(
       () => {
         const plantName = debouncedSearchTerm;
-        console.log("FUCKING PLANT NAME" + plantName)
+        console.log("PLANT NAME" + plantName)
         // Make sure we have a value (user has entered something in input)
         if (debouncedSearchTerm) {
           console.log("STUPID RESULTS" + debouncedSearchTerm);
@@ -41,10 +40,11 @@ function Navbar() {
             // Set back to false since request finished
             setIsSearching(false);
             // Set results state
-            setResults(results);
+            console.log(results)
+            props.setResults(results.data);
           });
         } else {
-          setResults([]);
+          props.setResults([]);
         }
 
       },
@@ -92,12 +92,7 @@ function Navbar() {
                   <label htmlFor="plantSearch" className="sr-only">Search : </label>
                   <input type="search" className="form-control" id="plantSearch" placeholder="Search by plant name..." onChange={e => setSearchTerm(e.target.value)}/>
                   {isSearching && <div>Searching...</div>}
-                  {results.map(result => (
-                    <div key={result.data.id}>
-                      <h4>{result.data.name}</h4>
-                    </div>
-                    // {console.log(results)}
-                  ))}
+                 
                 </div>
                 {/* <button 
                   type="submit" 

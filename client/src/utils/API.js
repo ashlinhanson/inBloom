@@ -13,11 +13,8 @@ export default {
   //   return axios.get("/plant/" + id);
   // },
 
-    searchPlants: async (req, res) => {
-        const plantName = req;
-        const response = await fetch(`https://trefle.io/api/v1/plants/search?q=${plantName}?token=YAJT0mak-g3CsuHS4YDL0iQPaeNCXHGRiwju5gkz-zM`);
-        const json = await response.json();
-        console.log(json);
+    searchPlants: (query) => {
+        return axios.get('/api/trefle/search/'+ query);
       },
     //     const plantName = req;
     //     console.log("THIS IS THE NAME " + plantName);
