@@ -1,4 +1,5 @@
 import axios from "axios";
+import fetch from 'node-fetch';
 
 export default {
   // search by plant name
@@ -12,22 +13,27 @@ export default {
   //   return axios.get("/plant/" + id);
   // },
 
-    searchPlants: function (req,res){
+    searchPlants: async (req, res) => {
         const plantName = req;
-        console.log("THIS IS THE NAME " + plantName);
-        const Url = `https://trefle.io/api/v1/plants/search?q=${plantName}/?token=YAJT0mak-g3CsuHS4YDL0iQPaeNCXHGRiwju5gkz-zM`;
-        console.log("THE DUMB URL " + Url)
-        axios.get(Url, {
-          // params: {
-          //   plantName: plantName
-          // }
-        })
-        .then((result) => {
-            res.json(result.data.items);
-        }).catch(err => {
-            console.log(err);
-        });
-    },
+        const response = await fetch(`https://trefle.io/api/v1/plants/search?q=${plantName}?token=YAJT0mak-g3CsuHS4YDL0iQPaeNCXHGRiwju5gkz-zM`);
+        const json = await response.json();
+        console.log(json);
+      },
+    //     const plantName = req;
+    //     console.log("THIS IS THE NAME " + plantName);
+    //     const Url = `https://trefle.io/api/v1/plants/search?q=${plantName}/?token=YAJT0mak-g3CsuHS4YDL0iQPaeNCXHGRiwju5gkz-zM`;
+    //     console.log("THE DUMB URL " + Url)
+    //     axios.get(Url, {
+    //       // params: {
+    //       //   plantName: plantName
+    //       // }
+    //     })
+    //     .then((result) => {
+    //         res.json(result.data.items);
+    //     }).catch(err => {
+    //         console.log(err);
+    //     });
+    
 
     plantDetail : function (req, res) {
         const plantID = req.params.id;
