@@ -1,14 +1,59 @@
 import React, { useState, useEffect } from 'react';
+import useDebounce from "./use-debounce";
 import { gsap, TimelineLite, Power3 } from 'gsap';
 import Logout from './Logout';
 import API from '../utils/API';
 
-function Navbar() {
+function Navbar(props) {
 
     // const [searchState, setSearchState] = useState({
     //   plantName : " ",
     //   searchResults : []
     // })
+    // State and setter for search term
+    const [searchTerm, setSearchTerm] = useState('');
+  
+    // State for search status (whether there is a pending API request)
+    const [isSearching, setIsSearching] = useState(false);
+
+    // Now we call our hook, passing in the current searchTerm value.
+    // The hook will only return the latest value (what we passed in) ...
+    // ... if it's been more than 500ms since it was last called.
+    // Otherwise, it will return the previous value of searchTerm.
+    // The goal is to only have the API call fire when user stops typing ...
+    // ... so that we aren't hitting our API rapidly.
+    const debouncedSearchTerm = useDebounce(searchTerm, 500);
+
+    // Here's where the API call happens
+    // We use useEffect since this is an asynchronous action
+    useEffect(
+      () => {
+        const plantName = debouncedSearchTerm;
+        console.log("PLANT NAME" + plantName)
+        // Make sure we have a value (user has entered something in input)
+        if (debouncedSearchTerm) {
+          console.log("STUPID RESULTS" + debouncedSearchTerm);
+          // Set isSearching state
+          setIsSearching(true);
+          // Fire off our API call
+          API.searchPlants(plantName).then(results => {
+            // Set back to false since request finished
+            setIsSearching(false);
+            // Set results state
+            console.log(results)
+            props.setResults(results.data);
+          });
+        } else {
+          props.setResults([]);
+        }
+
+      },
+      // This is the useEffect input array
+      // Our useEffect function will only execute if this value changes ...
+      // ... and thanks to our hook it will only change if the original ...
+      // value (searchTerm) hasn't changed for more than 500ms.
+      [debouncedSearchTerm]
+    );
 
 
     let tl = new TimelineLite({ delay: 0.8 })
@@ -42,18 +87,20 @@ function Navbar() {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item active search">
-            <form class="form-inline">
-                <div class="form-group mx-sm-3 mb-2">
-                  <label for="plantSearch" class="sr-only">Search : </label>
-                  <input type="search" class="form-control" id="plantSearch" placeholder="Search by plant name..."/>
+            <form className="form-inline">
+                <div className="form-group mx-sm-3 mb-2">
+                  <label htmlFor="plantSearch" className="sr-only">Search : </label>
+                  <input type="search" className="form-control" id="plantSearch" placeholder="Search by plant name..." onChange={e => setSearchTerm(e.target.value)}/>
+                  {isSearching && <div>Searching...</div>}
+                 
                 </div>
-                <button 
+                {/* <button 
                   type="submit" 
                   class="btn btn-success mb-2 mx-4"
                   // onClick={handleFormSubmit}
                   >
                     Search Plants
-                </button>
+                </button> */}
             </form>
             </li>
             <li className="nav-item contact">
