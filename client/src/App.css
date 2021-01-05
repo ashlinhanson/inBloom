@@ -8,17 +8,17 @@
 }
 
 body {
-  background-image: url("../src/images/asset-7.png");
+  background-color: #f8f0d7;
 }
 
 .sublead {
-  font-family: 'Lobster', cursive;
+  font-family: 'Coustard', serif;
   font-size: 1.8rem !important;
   color: rgb(63, 63, 63) !important;
   }
 
 .lead {
-  font-family: 'Lobster', cursive;
+  font-family: 'Coustard', serif;
   font-size: 2rem !important;
   color: rgb(68, 68, 68);
   }
@@ -28,11 +28,11 @@ body {
     }
     
 .inbloom {		
-    width: 60%;
+    width: 40%;
     }
   
 
-.monstera {
+/* .monstera {
   width: 60%;
   position: absolute;
   z-index: 10;
@@ -57,7 +57,7 @@ body {
       opacity: 100%;
 
     }
-  }
+  } */
 
 
 @media (prefers-reduced-motion: no-preference) {

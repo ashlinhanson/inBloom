@@ -1,8 +1,8 @@
 import React from "react";
 import Login from "../components/Login";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import header from "../images/header3.png";
-import monstera1 from "../images/monstera1.png"
+import inbloom from "../images/inbloom.png";
+// import monstera1 from "../images/monstera1.png"
 import { useGoogleLogin } from 'react-google-login';
 const clientId = "21199057526-pc5p89vu1fos35ufcd9m597mmd84aq88.apps.googleusercontent.com";
 
@@ -18,11 +18,11 @@ function Home(props) {
     return(
      
         <div>
-            <img className="monstera" src={monstera1}></img>
+            {/* <img className="monstera" src={monstera1}></img> */}
             {/* the header of the homepage  */}
             <div className="jumbotron bg-transparent text-center">
-                <img className="inbloom" src={header}></img>
-                <p className="sublead mt-5">Let's Get Growing</p>
+                <img className="inbloom" src={inbloom}></img>
+                
             </div>
             {/* the google sign in button/established users */}
             <div className="container m-5 col-4 mx-auto text-center">
