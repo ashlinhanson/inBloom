@@ -28,10 +28,8 @@ function Garden(props) {
         
         {/* trigger a modal with belows results that you can add to the garden */}
          {results.map(result => (
-                    <div key={result.plant}>
-                        <PlantCard plant={result.plant}/>
-
-                      
+                    <div key={result.id}>
+                        <PlantCard plant={result}/>
                     </div>
   
                
