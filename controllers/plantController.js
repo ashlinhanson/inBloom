@@ -3,6 +3,7 @@ const db = require("../models");
 module.exports = {
 
   create: function(req, res) {
+    console.log("This is the req " + req);
     db.Plant.create(req.body) 
       .then(function(dbModel) {
         res.json(dbModel);

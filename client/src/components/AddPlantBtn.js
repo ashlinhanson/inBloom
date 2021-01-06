@@ -9,10 +9,16 @@ function AddPlantBtn(props) {
         trefle_id: props.plant.id,
         UserId: props.user
     }
-    function onClick (){
-        API.addPlant(data)
-    }
 
+    function onClick () {
+        API.addPlant(data).then(res=>{
+            console.log(res.data.common_name + " added to your garden!");
+            // we'll need to update user state in order to re-render
+            // the user's plants here as well
+        })
+        
+    };
+      
     return (
         <div>
             <button className="btn" onClick={onClick}>Add to Your Garden</button>
