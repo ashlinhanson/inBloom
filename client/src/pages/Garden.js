@@ -30,11 +30,11 @@ function Garden(props) {
 
          {results.map(result => (
                     
-                        <PlantCard key={result.id} plant={result}/>
+            <PlantCard key={result.id} plant={result} user={props.user.id}/>
                
-                  ))}
+         ))}
 
-{/* this can show saved ones */}
+      {/* this can show saved ones */}
 
         {/* <div className="container p-3 mb-5 rounded text-center mx-auto" style={{width: "fit-content"}}>
             {plants.map(plant => (
