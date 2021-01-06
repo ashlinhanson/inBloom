@@ -7,15 +7,11 @@ function Garden(props) {
 
      // State and setter for search results
    const [results, setResults] = useState([]);
-   // const [plants, setPlants] = useState([
-   //    savedPlants: [];
-   // ]);
-
-   // const [user, setUser] = useState([]);
    
-   // useEffect(() => {
-   //    setUser = props.user
-   // }, [])
+   
+   useEffect(() => {
+      console.log(props.user.id)
+   }, [])
  
    // function handleGetPlants() {
    //    API.findByEmail(results => {
