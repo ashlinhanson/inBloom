@@ -40,7 +40,7 @@ function Navbar(props) {
             // Set back to false since request finished
             setIsSearching(false);
             // Set results state
-            console.log(results)
+            console.log(results.data)
             props.setResults(results.data);
           });
         } else {

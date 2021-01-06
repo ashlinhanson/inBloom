@@ -31,6 +31,15 @@ body {
     width: 40%;
     }
   
+#plant-cards {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  display: flex;
+  width: 100vw;
+  overflow-y: hidden;
+  overflow-x: auto !important;
+}
 
 /* .monstera {
   width: 60%;

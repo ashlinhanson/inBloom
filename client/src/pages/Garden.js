@@ -17,21 +17,20 @@ function Garden(props) {
    //    API.findByEmail(results => {
    //       setPlants({ ...plants, savedPlants: results });
    //   });
-   // };
+   console.log(results)
    return (
       <div>
          <div className="jumbotron bg-success">
             <h1 className="display-3 text-center">Your Garden</h1>
          </div>
-         <Navbar setResults={setResults} /> 
-         <div className="container p-3 mb-5 rounded text-center mx-auto" style={{width: "fit-content"}}>
+         <Navbar setResults={setResults} results={results} /> 
+         <div id="plant-cards" className="row p-3 mb-5">
         
         {/* trigger a modal with belows results that you can add to the garden */}
+
          {results.map(result => (
-                    <div key={result.id}>
-                      <h4>{result.common_name}</h4>
-                    </div>
-   // <PlantCard plant={result} />
+                    
+                        <PlantCard key={result.id} plant={result}/>
                
                   ))}
 
