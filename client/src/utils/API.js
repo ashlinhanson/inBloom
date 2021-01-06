@@ -45,7 +45,7 @@ export default {
     },
     // add plant
     addPlant: function(plantData) {
-      return axios.post("/api/plant" + plantData)
+      return axios.post("/api/plant", plantData);
     },
 
     // find user by email
