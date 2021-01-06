@@ -24,14 +24,13 @@ function Garden(props) {
             <h1 className="display-3 text-center">Your Garden</h1>
          </div>
          <Navbar setResults={setResults} results={results} /> 
-         <div className="container p-3 mb-5 rounded text-center mx-auto" style={{width: "fit-content"}}>
+         <div id="plant-cards" className="row p-3 mb-5">
         
         {/* trigger a modal with belows results that you can add to the garden */}
+
          {results.map(result => (
-                    <div key={result.id}>
-                        <PlantCard plant={result}/>
-                    </div>
-  
+                    
+                        <PlantCard key={result.id} plant={result}/>
                
                   ))}
 
