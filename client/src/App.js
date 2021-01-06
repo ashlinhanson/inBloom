@@ -7,12 +7,11 @@ import NewUser from "./pages/NewUser";
 
 function App() {
 
-const [user, setUser] = useState(null)
-useEffect(() => {
-  setUser(JSON.parse(sessionStorage.getItem('userData')))
-}, [])
+  const [user, setUser] = useState();
+  useEffect(() => {
+    setUser(JSON.parse(sessionStorage.getItem('userData')))
+  }, [])
 
-console.log(user)
   return (
     <Router>
       <div>
