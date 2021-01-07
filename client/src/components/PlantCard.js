@@ -22,12 +22,12 @@ function PlantCard(props) {
 
     return(
         
-                <div className="card m-2 p-2" key={props.plant.id} style={{width: "350px"}}>
-                    <h3 className="card-title">{displayName}</h3>
-                    <img src={img} className="card-img-top" alt={props.plant.scientific_name} style={{height: "350px"}}/>
-                        <AddPlantBtn plant={props.plant} displayName={displayName} user={props.user} img={img}/>
-                        <MoreInfoBtn />
-                </div>
+        <div className="card m-2 p-2" key={props.plant.id} style={{width: "350px"}}>
+            <h3 className="card-title">{displayName}</h3>
+            <img src={img} className="card-img-top" alt={props.plant.scientific_name} style={{height: "350px"}}/>
+                <AddPlantBtn plant={props.plant} displayName={displayName} user={props.user} img={img}/>
+                <MoreInfoBtn plant={props.plant} plantId={props.plant.id} displayName={displayName} img={img} user={props.user} />
+        </div>
  
 
     );

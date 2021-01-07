@@ -3,23 +3,23 @@ import PlantInfo from "./PlantInfo";
 import Button from "react-bootstrap";
 
 function MoreInfoBtn(props) {
-    const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = React.useState(false);
 
-
-    return(
+  return (
     <div>
       <Button variant="primary" onClick={() => setModalShow(true)}>
-       More Info
+        More Info
       </Button>
 
-      <PlantInfo
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
+      <PlantInfo show={modalShow} 
+        onHide={() => setModalShow(false)} 
+        plant={props.plant} 
+        plantId={props.plantId} 
+        displayName={displayName} 
+        img={img} 
+        user={props.user} />
     </div>
-        
-        
-    )
+  );
 }
 
 export default MoreInfoBtn;
