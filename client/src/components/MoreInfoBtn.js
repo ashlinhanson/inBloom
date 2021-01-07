@@ -1,12 +1,22 @@
 import React from "react";
+import PlantInfo from "./PlantInfo";
+import Button from "react-bootstrap";
 
+function MoreInfoBtn(props) {
+    const [modalShow, setModalShow] = React.useState(false);
 
-function MoreInfoBtn() {
 
     return(
-        <div>
-            <button className="btn">More Info</button>
-        </div>   
+    <div>
+      <Button variant="primary" onClick={() => setModalShow(true)}>
+       More Info
+      </Button>
+
+      <PlantInfo
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+    </div>
         
         
     )
