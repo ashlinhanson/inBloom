@@ -13,8 +13,7 @@ function AddPlantBtn(props) {
     function onClick () {
         API.addPlant(data).then(res=>{
             console.log(res.data.common_name + " added to your garden!");
-            // we'll need to update user state in order to re-render
-            // the user's plants here as well
+            // we should add a toast or popup to show that the plant was added to the user's garden
         })
         
     };

@@ -42,6 +42,7 @@ function Navbar(props) {
             // Set results state
             console.log(results.data)
             props.setResults(results.data);
+            props.setIsSearching(true);
           });
         } else {
           props.setResults([]);
