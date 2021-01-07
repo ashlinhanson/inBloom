@@ -49,13 +49,17 @@ export default {
     },
 
     // find user by email
-    findByEmail: function (email) {
-      return axios.get()
-    },
+    // findByEmail: function (email) {
+    //   return axios.get()
+    // },
 
     // post request using userData from google
     signInUser: function (userData) {
       return axios.post("/api/user", userData)
+    },
+
+    searchUserById: function (id) {
+      return axios.get("/api/user/" + id)
     }
 
     

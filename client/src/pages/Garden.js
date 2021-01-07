@@ -7,30 +7,41 @@ function Garden(props) {
 
      // State and setter for search results
    const [results, setResults] = useState([]);
-   
+   const [isSearching, setIsSearching] = useState(false);
    
    useEffect(() => {
       console.log(props.user.id)
+      // API.searchUserById(props.user.id)
+      //    .then(res => {
+      //       setResults(res.data.Plants)
+      //    })
+      handleGetPlants();
    }, [])
  
-   // function handleGetPlants() {
-   //    API.findByEmail(results => {
-   //       setPlants({ ...plants, savedPlants: results });
-   //   });
+   const handleGetPlants = () => {
+      API.searchUserById(props.user.id)
+      .then(results => {
+         setResults(results.data.Plants);
+         setIsSearching(false);
+     });
+   }
+   
    console.log(results)
    return (
       <div>
          <div className="jumbotron bg-success">
             <h1 className="display-3 text-center">Your Garden</h1>
          </div>
-         <Navbar setResults={setResults} results={results} /> 
+         <Navbar setResults={setResults} results={results} setIsSearching={setIsSearching} /> 
+            {/* we'll want to re-style this button, this is just a placeholder for functionality */}
+            {isSearching && <button onClick={handleGetPlants}>Back to Garden</button>}
          <div id="plant-cards" className="row p-3 mb-5">
         
         {/* trigger a modal with belows results that you can add to the garden */}
 
          {results.map(result => (
                     
-            <PlantCard key={result.id} plant={result} user={props.user.id}/>
+            <PlantCard key={result.id} plant={result} user={props.user.id} isSearching={isSearching} />
                
          ))}
 
