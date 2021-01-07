@@ -6,6 +6,12 @@ import API from "../utils/API";
 
 function PlantInfo(props) {
  
+  let plantId = props.plantId;
+  function getInfo (plantId) {
+    API.plantInfo(plantId).then(result => {
+      
+    })
+  }
  
   return (
     <Modal
