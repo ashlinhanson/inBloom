@@ -1,7 +1,8 @@
 import React from "react";
 import AddPlantBtn from "./AddPlantBtn";
 import InfoContainer from "./InfoContainer";
-import Modal from "react-bootstrap";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 import API from "../utils/API";
 
 function PlantInfo(props) {
@@ -9,7 +10,7 @@ function PlantInfo(props) {
   let plantId = props.plantId;
   function getInfo (plantId) {
     API.plantInfo(plantId).then(result => {
-      
+      console.log(result)
     })
   }
  

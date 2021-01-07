@@ -1,6 +1,6 @@
 import React from "react";
 import PlantInfo from "./PlantInfo";
-import Button from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 
 function MoreInfoBtn(props) {
   const [modalShow, setModalShow] = React.useState(false);
@@ -15,8 +15,8 @@ function MoreInfoBtn(props) {
         onHide={() => setModalShow(false)} 
         plant={props.plant} 
         plantId={props.plantId} 
-        displayName={displayName} 
-        img={img} 
+        displayName={props.displayName} 
+        img={props.img} 
         user={props.user} />
     </div>
   );
