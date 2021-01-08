@@ -19,7 +19,7 @@ function MoreInfoBtn(props) {
  }
  return (
    <div>
-     <Button variant="primary" onClick={() => setModalShow(true)} onClick={() => getInfo()}>
+     <Button variant="primary" onClick={() => [setModalShow(true), getInfo()]}>
        More Info
      </Button>
  
