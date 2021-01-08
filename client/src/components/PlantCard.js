@@ -25,7 +25,7 @@ function PlantCard(props) {
                 <div className="card m-2 p-2" key={props.plant.id} style={{width: "350px"}}>
                     <h3 className="card-title">{displayName}</h3>
                     <img src={img} className="card-img-top mx-auto" alt={props.plant.scientific_name} />
-                        {props.isSearching && <AddPlantBtn plant={props.plant} displayName={displayName} user={props.user} img={img}/>}
+                        {!props.userGarden && <AddPlantBtn plant={props.plant} displayName={displayName} user={props.user} img={img} />}
                         <MoreInfoBtn />
                 </div>
  

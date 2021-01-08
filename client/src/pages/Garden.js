@@ -9,6 +9,8 @@ function Garden(props) {
      // State and setter for search results
    const [results, setResults] = useState([]);
    const [isSearching, setIsSearching] = useState(false);
+   const [userGarden, setUserGarden] = useState(true);
+
    
    useEffect(() => {
       console.log(props.user.id)
@@ -24,6 +26,7 @@ function Garden(props) {
       .then(results => {
          setResults(results.data.Plants);
          setIsSearching(false);
+         setUserGarden(true);
      });
    }
    
@@ -33,16 +36,19 @@ function Garden(props) {
          <div className="jumbotron garden-jumbo">
             <img className="gardenHeader" src={gardenHeader}></img>
          </div>
-         <Navbar setResults={setResults} results={results} setIsSearching={setIsSearching} /> 
-            {/* we'll want to re-style this button, this is just a placeholder for functionality */}
-            {isSearching && <button onClick={handleGetPlants}>Back to Garden</button>}
+         <Navbar setResults={setResults} 
+         results={results} 
+         setIsSearching={setIsSearching} 
+         setUserGarden={setUserGarden} 
+         userGarden={userGarden} 
+         handleGetPlants={handleGetPlants} /> 
          <div id="plant-cards" className="row p-3 mb-5">
         
         {/* trigger a modal with belows results that you can add to the garden */}
 
          {results.map(result => (
                     
-            <PlantCard key={result.id} plant={result} user={props.user.id} isSearching={isSearching} />
+            <PlantCard key={result.id} plant={result} user={props.user.id} userGarden={userGarden} />
                
          ))}
 
