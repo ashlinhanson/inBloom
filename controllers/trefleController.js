@@ -7,8 +7,6 @@ module.exports = {
         axios
             .get(Url)
             .then((result) => {
-                console.log("i was hit")
-
                 res.json(result.data.data);
             }).catch(err => {
                 console.log(err);
@@ -26,6 +24,7 @@ module.exports = {
         axios(config)
             .then(function (response) {
                 console.log(JSON.stringify(response.data));
+                res.json(response.data.data);
             })
             .catch(function (error) {
                 console.log(error);

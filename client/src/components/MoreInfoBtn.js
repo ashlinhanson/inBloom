@@ -15,7 +15,7 @@ function MoreInfoBtn(props) {
  function getInfo () {
     API.plantDetail(plantID).then(result => {
         plantResult = result;
-        console.log("I am result"  + plantResult)
+        console.log(plantResult)
     })  
  }
  return (
@@ -26,8 +26,7 @@ function MoreInfoBtn(props) {
  
      <PlantInfo show={modalShow}
        onHide={() => setModalShow(false)}
-       plant={props.plant}
-       plantid={props.plantId}
+       plantresult={plantResult}
        displayname={props.displayName}
        img={props.img}
        user={props.user} />
