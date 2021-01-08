@@ -1,32 +1,35 @@
 const axios = require('axios');
 
 module.exports = {
-    searchPlants: function (req,res){
+    searchPlants: function (req, res) {
         const plantName = req.params.plantName;
-        
         const Url = `https://trefle.io/api/v1/plants/search?q=${plantName}&token=${process.env.TREFFLE_KEY}`;
-        console.log("THE DUMB URL " + Url)
         axios
-        .get(Url)
-        .then((result) => {
-            console.log(result)
-            res.json(result.data.data);
-        }).catch(err => {
-            console.log(err);
-        });
+            .get(Url)
+            .then((result) => {
+                console.log("i was hit")
+
+                res.json(result.data.data);
+            }).catch(err => {
+                console.log(err);
+            });
     },
 
-    plantDetail : function (req, res) {
+    plantDetail: function (req, res) {
         const plantID = req.params.id;
-        const Url = `https://trefle.io/api/v1/plants/${plantID}?token=${TREFFLE_KEY}`;
-        
+        let config = {
+            method: 'get',
+            url: 'https://trefle.io/api/v1/plants/' + plantID + '?token=' + process.env.TREFFLE_KEY,
+            headers: {}
+        };
 
-        axios.get(Url).then((result) => {
-            res.json(result.data.items);
-        }).catch(err => {
-            console.log(err);
-        });
+        axios(config)
+            .then(function (response) {
+                console.log(JSON.stringify(response.data));
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
     }
 }
-
-
