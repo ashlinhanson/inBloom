@@ -36,7 +36,12 @@ function Garden(props) {
          <div className="jumbotron garden-jumbo">
             <img className="gardenHeader" src={gardenHeader}></img>
          </div>
-         <Navbar setResults={setResults} results={results} setIsSearching={setIsSearching} setUserGarden={setUserGarden} userGarden={userGarden} handleGetPlants={handleGetPlants} /> 
+         <Navbar setResults={setResults} 
+         results={results} 
+         setIsSearching={setIsSearching} 
+         setUserGarden={setUserGarden} 
+         userGarden={userGarden} 
+         handleGetPlants={handleGetPlants} /> 
          <div id="plant-cards" className="row p-3 mb-5">
         
         {/* trigger a modal with belows results that you can add to the garden */}
