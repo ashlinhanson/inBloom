@@ -10,11 +10,12 @@ import fetch from 'node-fetch';
 function MoreInfoBtn(props) {
  const [modalShow, setModalShow] = React.useState(false);
  let plantID = props.plantId;
- 
+ let plantResult;
+
  function getInfo () {
     API.plantDetail(plantID).then(result => {
-        console.log(plantID)
-        console.log(result)
+        plantResult = result;
+        console.log("I am result"  + plantResult)
     })  
  }
  return (
@@ -26,8 +27,8 @@ function MoreInfoBtn(props) {
      <PlantInfo show={modalShow}
        onHide={() => setModalShow(false)}
        plant={props.plant}
-       plantId={props.plantId}
-       displayName={props.displayName}
+       plantid={props.plantId}
+       displayname={props.displayName}
        img={props.img}
        user={props.user} />
    </div>
