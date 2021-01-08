@@ -16,6 +16,9 @@ function Navbar(props) {
     // State for search status (whether there is a pending API request)
     const [isSearching, setIsSearching] = useState(false);
 
+    const [userGarden, setUserGarden] = useState(true);
+    
+
     // Now we call our hook, passing in the current searchTerm value.
     // The hook will only return the latest value (what we passed in) ...
     // ... if it's been more than 500ms since it was last called.
@@ -35,6 +38,7 @@ function Navbar(props) {
           console.log("STUPID RESULTS" + debouncedSearchTerm);
           // Set isSearching state
           setIsSearching(true);
+          setUserGarden(true);
           // Fire off our API call
           API.searchPlants(plantName).then(results => {
             // Set back to false since request finished
@@ -42,7 +46,9 @@ function Navbar(props) {
             // Set results state
             console.log(results.data)
             props.setResults(results.data);
-            props.setIsSearching(true);
+            props.setIsSearching(false);
+            props.setUserGarden(false);
+          
           });
         } else {
           props.setResults([]);
@@ -82,6 +88,8 @@ function Navbar(props) {
 
       <nav id="navbar" className="navbar navbar-expand-lg navbar-light bg-light mt-n5">
         <a id="navbar-title" className="navbar-brand homes text-success" href="#">inBloom</a>
+        {/* {props.userGarden && <button>Back to Garden</button>}   */}
+        {!props.userGarden && <button>Back to Garden</button>}
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
