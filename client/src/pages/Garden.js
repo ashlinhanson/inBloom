@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import PlantCard from "../components/PlantCard";
-import gardenHeader from "../images/Your-Garden.svg"
+import gardenHeader from "../images/yourgarden.svg"
 import API from "../utils/API";
 
 function Garden(props) {
