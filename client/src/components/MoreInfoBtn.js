@@ -8,28 +8,30 @@ import fetch from 'node-fetch';
 
  
 function MoreInfoBtn(props) {
- const [modalShow, setModalShow] = React.useState(false);
- let plantID = props.plantId;
- 
- function getInfo () {
-    API.plantDetail(plantID).then(result => {
-        console.log(plantID)
-        console.log(result)
-    })  
- }
+    const [modalShow, setModalShow] = React.useState(false);
+    const [plantRes, setPlantRes] = React.useState();
+    let plantID = props.plantId;
+    
+  
+
+    function getInfo () {
+        API.plantDetail(plantID).then(result => {
+            setPlantRes(result);  
+        })
+    }
  return (
    <div>
-     <Button variant="primary" onClick={() => setModalShow(true)} onClick={() => getInfo()}>
+     <Button variant="primary" onClick={() => [setModalShow(true), getInfo()]}>
        More Info
      </Button>
  
      <PlantInfo show={modalShow}
        onHide={() => setModalShow(false)}
-       plant={props.plant}
-       plantId={props.plantId}
-       displayName={props.displayName}
+       plantres={plantRes}
+       displayname={props.displayName}
        img={props.img}
-       user={props.user} />
+       user={props.user}
+     />
    </div>
  );
 }
