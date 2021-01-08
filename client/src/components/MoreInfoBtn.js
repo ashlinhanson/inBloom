@@ -8,16 +8,19 @@ import fetch from 'node-fetch';
 
  
 function MoreInfoBtn(props) {
- const [modalShow, setModalShow] = React.useState(false);
- let plantID = props.plantId;
- let plantResult;
+    const [modalShow, setModalShow] = React.useState(false);
+    const [plantRes, setPlantRes] = React.useState();
+    let plantID = props.plantId;
+    let plantResult;
+  
 
- function getInfo () {
-    API.plantDetail(plantID).then(result => {
-        plantResult = result;
-        console.log(plantResult)
-    })  
- }
+    function getInfo () {
+        API.plantDetail(plantID).then(result => {
+            plantResult = result;
+            console.log(plantResult)
+            setPlantRes(result);  
+        })
+    }
  return (
    <div>
      <Button variant="primary" onClick={() => [setModalShow(true), getInfo()]}>
@@ -26,10 +29,11 @@ function MoreInfoBtn(props) {
  
      <PlantInfo show={modalShow}
        onHide={() => setModalShow(false)}
-       plantresult={plantResult}
+       plantres={plantRes}
        displayname={props.displayName}
        img={props.img}
-       user={props.user} />
+       user={props.user}
+     />
    </div>
  );
 }
