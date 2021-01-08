@@ -11,16 +11,16 @@ function MoreInfoBtn(props) {
  const [modalShow, setModalShow] = React.useState(false);
  let plantID = props.plantId;
 
- var requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
-  };
-  function plantDetail (){
-  fetch("https://trefle.io/api/v1/plants/" + plantID + "?token=YAJT0mak-g3CsuHS4YDL0iQPaeNCXHGRiwju5gkz-zM", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
-  } 
+//  var requestOptions = {
+//     method: 'GET',
+//     redirect: 'follow'
+//   };
+//   function plantDetail (){
+//   fetch("https://trefle.io/api/v1/plants/" + plantID + "?token=YAJT0mak-g3CsuHS4YDL0iQPaeNCXHGRiwju5gkz-zM", requestOptions)
+//     .then(response => response.text())
+//     .then(result => console.log(result))
+//     .catch(error => console.log('error', error));
+//   } 
 //  async function plantDetail () {
 //     let TREFFLE_KEY = "YAJT0mak-g3CsuHS4YDL0iQPaeNCXHGRiwju5gkz-zM"
 //     console.log("I was called " + plantID)
@@ -44,7 +44,7 @@ function MoreInfoBtn(props) {
  }
  return (
    <div>
-     <Button variant="primary" onClick={() => setModalShow(true)} onClick={() => plantDetail()}>
+     <Button variant="primary" onClick={() => setModalShow(true)} onClick={() => getInfo()}>
        More Info
      </Button>
  

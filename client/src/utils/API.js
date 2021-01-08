@@ -32,9 +32,7 @@ export default {
     //     });
     
     plantDetail: (id) => {
-      let TREFFLE_KEY = "YAJT0mak-g3CsuHS4YDL0iQPaeNCXHGRiwju5gkz-zM"
-      console.log("I was called " + id)
-      return axios.get('https://trefle.io/api/v1/plants/' + id + '?token=' + TREFFLE_KEY);
+      return axios.get('/api/trefle/detail/'+ id);
     },
    
 

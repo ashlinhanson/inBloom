@@ -17,16 +17,29 @@ module.exports = {
 
     plantDetail: function (req, res) {
         const plantID = req.params.id;
-        const Url = `https://trefle.io/api/v1/plants?q=${plantID}&token=${process.env.TREFFLE_KEY}`;
-        console.log("I'm the url " + Url)
+        let config = {
+            method: 'get',
+            url: 'https://trefle.io/api/v1/plants/' + plantID + '?token=' + process.env.TREFFLE_KEY,
+            headers: { }
+          };
+          
+          axios(config)
+          .then(function (response) {
+            console.log(JSON.stringify(response.data));
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+        // const Url = `https://trefle.io/api/v1/plants?q=${plantID}&token=${process.env.TREFFLE_KEY}`;
+        // console.log("I'm the url " + Url)
 
-        axios.get(Url)
-        .then((result) => {
-            console.log("I'm the url " + Url)
-            res.json(result.data.items);
-        }).catch(err => {
-            console.log(err);
-        });
+        // axios.get(Url)
+        // .then((result) => {
+        //     console.log("I'm the url " + Url)
+        //     res.json(result.data.items);
+        // }).catch(err => {
+        //     console.log(err);
+        // });
     }
 }
 
