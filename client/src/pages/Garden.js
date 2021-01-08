@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import PlantCard from "../components/PlantCard";
+import gardenHeader from "../images/Your-Garden.svg"
 import API from "../utils/API";
 
 function Garden(props) {
@@ -29,8 +30,8 @@ function Garden(props) {
    console.log(results)
    return (
       <div>
-         <div className="jumbotron bg-success">
-            <h1 className="display-3 text-center">Your Garden</h1>
+         <div className="jumbotron garden-jumbo">
+            <img src={gardenHeader}></img>
          </div>
          <Navbar setResults={setResults} results={results} setIsSearching={setIsSearching} /> 
             {/* we'll want to re-style this button, this is just a placeholder for functionality */}

@@ -26,6 +26,11 @@ body {
 .jumbotron {
     background: none !important;
     }
+
+.garden-jumbo {
+  
+  background-color: #749C75 !important;
+}
     
 .inbloom {		
     width: 40%;
