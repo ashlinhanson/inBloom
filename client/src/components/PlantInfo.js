@@ -15,11 +15,11 @@ function PlantInfo(props) {
    >
    <Modal.Header closeButton>
      <Modal.Title id="contained-modal-title-vcenter">
-       {props.plantName}
+       {props.displayname}
      </Modal.Title>
    </Modal.Header>
    <Modal.Body>
-     <h4>Centered Modal</h4>
+     <img src={props.img} alt="plant"></img>
      <InfoContainer>
  
      </InfoContainer>
