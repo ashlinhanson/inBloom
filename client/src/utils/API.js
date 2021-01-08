@@ -31,18 +31,13 @@ export default {
     //         console.log(err);
     //     });
     
-
-    plantDetail : function (req, res) {
-        const plantID = req.params.id;
-        const Url = `https://trefle.io/api/v1/plants/${plantID}?token=${process.env.TREFFLE_KEY}`;
-        
-
-        axios.get(Url).then((result) => {
-            res.json(result.data.items);
-        }).catch(err => {
-            console.log(err);
-        });
+    plantDetail: (id) => {
+      let TREFFLE_KEY = "YAJT0mak-g3CsuHS4YDL0iQPaeNCXHGRiwju5gkz-zM"
+      console.log("I was called " + id)
+      return axios.get('https://trefle.io/api/v1/plants/' + id + '?token=' + TREFFLE_KEY);
     },
+   
+
     // add plant
     addPlant: function(plantData) {
       return axios.post("/api/plant", plantData);
