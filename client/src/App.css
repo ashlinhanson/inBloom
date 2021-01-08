@@ -26,6 +26,26 @@ body {
 .jumbotron {
     background: none !important;
     }
+
+.gardenHeader {
+  margin: auto;
+  text-align: center !important;
+  width: 60%;
+}
+
+.garden-jumbo {
+align-content: center;
+text-align: center;
+  background-color: #749C75 !important;
+}
+
+.garden-body {
+background:  #F8F0D7 !important;
+}
+
+.card-title {
+  font-family: 'Coustard', serif;
+}
     
 .inbloom {		
     width: 40%;
@@ -41,6 +61,30 @@ body {
   overflow-x: auto !important;
 }
 
+.card {
+  text-align: center;
+background-color: #EA8955 !important;
+border-radius: 20px !important;
+}
+
+.card-img-top {
+border-radius: 20px !important;
+text-align: center !important;
+width: 200px !important;
+height: 200px !important;
+
+}
+
+#navbar {
+  font-family: 'Coustard', serif;
+  background:  #F8F0D7 !important;
+}
+
+
+#navbar-title {
+  font-family: 'Coustard', serif;
+  color: #749C75 !important;
+}
 /* .monstera {
   width: 60%;
   position: absolute;
