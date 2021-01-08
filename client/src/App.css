@@ -62,9 +62,16 @@ background:  #F8F0D7 !important;
 }
 
 .card {
-
+  text-align: center;
 background-color: #EA8955 !important;
 border-radius: 20px !important;
+}
+
+.card-img-top {
+border-radius: 20px !important;
+text-align: center !important;
+width: 200px !important;
+
 }
 
 /* .monstera {
