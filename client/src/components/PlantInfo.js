@@ -10,11 +10,8 @@ function PlantInfo(props) {
   if (props.plantres){
     if (props.plantres.data.common_name === null) {
       sciName = "";
-      console.log("if");
     } else {
       sciName = "(" + props.plantres.data.scientific_name + ")";
-      console.log("else");
-      console.log(sciName);
     }
   }
   
@@ -32,7 +29,7 @@ function PlantInfo(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <img src={props.img} alt="plant"></img>
+        <img src={props.img} alt="plant" style={{width: "400px"}}></img>
         <InfoContainer></InfoContainer>
       </Modal.Body>
       <Modal.Footer>

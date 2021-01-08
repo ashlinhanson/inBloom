@@ -11,13 +11,11 @@ function MoreInfoBtn(props) {
     const [modalShow, setModalShow] = React.useState(false);
     const [plantRes, setPlantRes] = React.useState();
     let plantID = props.plantId;
-    let plantResult;
+    
   
 
     function getInfo () {
         API.plantDetail(plantID).then(result => {
-            plantResult = result;
-            console.log(plantResult)
             setPlantRes(result);  
         })
     }
