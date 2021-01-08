@@ -37,9 +37,6 @@ function Garden(props) {
             <img className="gardenHeader" src={gardenHeader}></img>
          </div>
          <Navbar setResults={setResults} results={results} setIsSearching={setIsSearching} setUserGarden={setUserGarden} userGarden={userGarden} /> 
-            {/* we'll want to re-style this button, this is just a placeholder for functionality */}
-            {isSearching && <button onClick={setIsSearching}>Back to Garden</button>}
-         
          <div id="plant-cards" className="row p-3 mb-5">
         
         {/* trigger a modal with belows results that you can add to the garden */}

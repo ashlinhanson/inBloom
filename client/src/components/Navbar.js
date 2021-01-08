@@ -3,6 +3,7 @@ import useDebounce from "./use-debounce";
 import { gsap, TimelineLite, Power3 } from 'gsap';
 import Logout from './Logout';
 import API from '../utils/API';
+import Button from "../components/Button";
 
 function Navbar(props) {
 
@@ -89,7 +90,7 @@ function Navbar(props) {
       <nav id="navbar" className="navbar navbar-expand-lg navbar-light bg-light mt-n5">
         <a id="navbar-title" className="navbar-brand homes text-success" href="#">inBloom</a>
         {/* {props.userGarden && <button>Back to Garden</button>}   */}
-        {!props.userGarden && <button>Back to Garden</button>}
+        {!props.userGarden && <Button text="Back to Garden" className="btn btn-outline-success" onClick={props.setResults}/>}
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
