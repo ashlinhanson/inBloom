@@ -61,6 +61,12 @@ background:  #F8F0D7 !important;
   overflow-x: auto !important;
 }
 
+.card {
+
+background-color: #EA8955 !important;
+border-radius: 20px !important;
+}
+
 /* .monstera {
   width: 60%;
   position: absolute;
