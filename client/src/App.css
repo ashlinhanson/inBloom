@@ -79,6 +79,11 @@ width: 200px !important;
   background:  #F8F0D7 !important;
 }
 
+
+#navbar-title {
+  font-family: 'Coustard', serif;
+  color: #749C75 !important;
+}
 /* .monstera {
   width: 60%;
   position: absolute;
