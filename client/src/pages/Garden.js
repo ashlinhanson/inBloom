@@ -29,9 +29,9 @@ function Garden(props) {
    
    console.log(results)
    return (
-      <div>
+      <div className="garden-body">
          <div className="jumbotron garden-jumbo">
-            <img src={gardenHeader}></img>
+            <img className="gardenHeader" src={gardenHeader}></img>
          </div>
          <Navbar setResults={setResults} results={results} setIsSearching={setIsSearching} /> 
             {/* we'll want to re-style this button, this is just a placeholder for functionality */}

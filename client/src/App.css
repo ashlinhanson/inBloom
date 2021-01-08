@@ -27,9 +27,24 @@ body {
     background: none !important;
     }
 
+.gardenHeader {
+  margin: auto;
+  text-align: center !important;
+  width: 60%;
+}
+
 .garden-jumbo {
-  
+align-content: center;
+text-align: center;
   background-color: #749C75 !important;
+}
+
+.garden-body {
+background:  #F8F0D7 !important;
+}
+
+.card-title {
+  font-family: 'Coustard', serif;
 }
     
 .inbloom {		
