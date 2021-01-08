@@ -18,7 +18,7 @@ function PlantCard(props) {
   } else {
     img = props.plant.image_url;
   }
-
+  
   return (
     <div
       className="card m-2 p-2"
