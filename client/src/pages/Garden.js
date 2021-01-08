@@ -48,7 +48,7 @@ function Garden(props) {
 
          {results.map(result => (
                     
-            <PlantCard key={result.id} plant={result} user={props.user.id} isSearching={isSearching} />
+            <PlantCard key={result.id} plant={result} user={props.user.id} userGarden={userGarden} />
                
          ))}
 
