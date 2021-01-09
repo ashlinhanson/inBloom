@@ -7,11 +7,17 @@ import API from "../utils/API";
 function MoreInfoBtn(props) {
     const [modalShow, setModalShow] = React.useState(false);
     const [plantRes, setPlantRes] = React.useState();
-    let plantID = props.plantId;
-    console.log(props);
+    
+    let plantID;
+
+    if (props.trefle_id === null) {
+      plantID = props.plantId;
+    } else {
+      plantID = props.trefle_id;
+    }
+    
     
   
-
     function getInfo () {
         API.plantDetail(plantID).then(result => {
             setPlantRes(result);  

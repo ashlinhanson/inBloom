@@ -45,6 +45,7 @@ function PlantCard(props) {
       <MoreInfoBtn
         plant={props.plant}
         plantId={props.plant.id}
+        trefle_id={props.plant.trefle_id}
         displayName={displayName}
         img={img}
         user={props.user}
