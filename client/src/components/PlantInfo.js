@@ -30,7 +30,17 @@ function PlantInfo(props) {
       </Modal.Header>
       <Modal.Body>
         <img src={props.img} alt="plant" style={{width: "400px"}}></img>
-        <InfoContainer></InfoContainer>
+        <InfoContainer id="infoContainer"
+          edible={props.plantres.main_species.edible}
+          distribution={props.plantres.main_species.native}
+          flower={props.plantres.main_species.flower.color}
+          growthform={props.plantres.main_species.specifications.growth_form}
+          growthhabit={props.plantres.main_species.specifications.growth_habit}
+          growthrate={props.plantres.main_species.specifications.growth_rate}
+          avgheight={props.plantres.main_species.specifications.average_height.cm}
+          maxheight={props.plantres.main_species.specifications.maximum_height.cm}
+        ></InfoContainer>
+        <InfoContainer id="careContainer"></InfoContainer>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
