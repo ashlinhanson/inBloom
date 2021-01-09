@@ -7,12 +7,25 @@ import API from "../utils/API";
 
 function PlantInfo(props) {
   let sciName = "";
+  let edible = "";
+  let plantData= {};
   if (props.plantres){
+    plantData = props.plantres
     if (props.plantres.data.common_name === null) {
       sciName = "";
     } else {
       sciName = "(" + props.plantres.data.scientific_name + ")";
     }
+    if (props.plantres.data.main_species.edible === true){
+      edible = "Yes";
+    } else if (!props.plantres.data.main_species.edible){
+      edible = null;
+    } else {
+      edible = "No";
+    }
+
+  } else {
+    plantData = null
   }
   
 
@@ -31,16 +44,33 @@ function PlantInfo(props) {
       <Modal.Body>
         <img src={props.img} alt="plant" style={{width: "400px"}}></img>
         <InfoContainer id="infoContainer"
-          edible={props.plantres.main_species.edible}
-          distribution={props.plantres.main_species.native}
-          flower={props.plantres.main_species.flower.color}
-          growthform={props.plantres.main_species.specifications.growth_form}
-          growthhabit={props.plantres.main_species.specifications.growth_habit}
-          growthrate={props.plantres.main_species.specifications.growth_rate}
-          avgheight={props.plantres.main_species.specifications.average_height.cm}
-          maxheight={props.plantres.main_species.specifications.maximum_height.cm}
+          edible={edible}
+          distribution={props.plantres.data.main_species.native}
+          flower={props.plantres.data.main_species.flower.color}
+          growthform={props.plantres.data.main_species.specifications.growth_form}
+          growthhabit={props.plantres.data.main_species.specifications.growth_habit}
+          growthrate={props.plantres.data.main_species.specifications.growth_rate}
+          avgheight={props.plantres.data.main_species.specifications.average_height.cm}
+          maxheight={props.plantres.data.main_species.specifications.maximum_height.cm}
+          toxicity="blah"
         ></InfoContainer>
-        <InfoContainer id="careContainer"></InfoContainer>
+        <InfoContainer id="careContainer"
+        phmax={props.plantres.data.main_species.growth.ph_maximum}
+        phmin={props.plantres.data.main_species.growth.ph_minimum}
+        bloommonths={props.plantres.data.main_species.growth.bloom_months}
+        light={props.plantres.data.main_species.growth.light}
+        growthmonths={props.plantres.data.main_species.growth.growth_months}
+        humidity={props.plantres.data.main_species.growth.atmospheric_humidity}
+        minwater={props.plantres.data.main_species.growth.minimum_precipitation}
+        maxwater={props.plantres.data.main_species.growth.maximum_precipitation}
+        rootdepth={props.plantres.data.main_species.growth.minimum_root_depth}
+        mintemp={props.plantres.data.main_species.growth.minimum_temperature}
+        maxtemp={props.plantres.data.main_species.growth.maximum_temperature}
+        soilnutriments={props.plantres.data.main_species.growth.soil_nutriments}
+        soilsalinity={props.plantres.data.main_species.growth.soil_salinity}
+        soiltexture={props.plantres.data.main_species.growth.soil_texture}
+        soilhumidity={props.plantres.data.main_species.growth.soil_humidity}
+        ></InfoContainer>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>

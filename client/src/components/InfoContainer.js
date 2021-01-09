@@ -1,9 +1,19 @@
 import React from "react";
 
-function InfoContainer() {
-
+function InfoContainer(props) {
+    console.log(props)
+    
     return(
-        <div />
+        <div>
+            {props && 
+            <div>
+            <h5>General Info</h5>
+            <ul>
+                <li>Edible: {props.edible ? props.edible : "Not Available"}</li>
+            </ul>
+            </div>
+            }
+        </div> 
     )
 }
 
