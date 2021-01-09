@@ -8,6 +8,8 @@ import API from "../utils/API";
 function PlantInfo(props) {
   let sciName = "";
   let edible = "";
+  let toxicity = "";
+
   let plantData= {};
   if (props.plantres){
     plantData = props.plantres
@@ -22,6 +24,13 @@ function PlantInfo(props) {
       edible = null;
     } else {
       edible = "No";
+    }
+    if (props.plantres.data.main_species.toxicity === true){
+      toxicity = "Yes";
+    } else if (!props.plantres.data.main_species.toxicity){
+      toxicity = null;
+    } else {
+      toxicity = "No";
     }
 
   } else {
@@ -45,14 +54,14 @@ function PlantInfo(props) {
         <img src={props.img} alt="plant" style={{width: "400px"}}></img>
         <InfoContainer id="infoContainer"
           edible={edible}
-          distribution={props.plantres.data.main_species.native}
+          // distribution={props.plantres.data.main_species.native}
           flower={props.plantres.data.main_species.flower.color}
           growthform={props.plantres.data.main_species.specifications.growth_form}
           growthhabit={props.plantres.data.main_species.specifications.growth_habit}
           growthrate={props.plantres.data.main_species.specifications.growth_rate}
           avgheight={props.plantres.data.main_species.specifications.average_height.cm}
           maxheight={props.plantres.data.main_species.specifications.maximum_height.cm}
-          toxicity="blah"
+          toxicity={toxicity}
         ></InfoContainer>
         <InfoContainer id="careContainer"
         phmax={props.plantres.data.main_species.growth.ph_maximum}
