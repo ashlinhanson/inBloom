@@ -4,11 +4,14 @@ import InfoContainer from "./InfoContainer";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import CareContainer from "./CareContainer";
+
+
 function PlantInfo(props) {
+
   let sciName = "";
   let edible = "";
   let toxicity = "";
-
+ 
   let plantData = {};
   if (props.plantres) {
     plantData = props.plantres;
@@ -34,6 +37,8 @@ function PlantInfo(props) {
   } else {
     plantData = null;
   }
+
+  
 
   return (
     <Modal
@@ -100,7 +105,12 @@ function PlantInfo(props) {
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
-        <AddPlantBtn />
+        <AddPlantBtn  common_name={props.displayName} 
+                      image_url={props.img} 
+                      trefle_id={props.id} 
+                      UserId={props.user}
+          />
+      
       </Modal.Footer>
     </Modal>
   );

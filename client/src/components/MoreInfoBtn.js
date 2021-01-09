@@ -8,6 +8,7 @@ function MoreInfoBtn(props) {
     const [modalShow, setModalShow] = React.useState(false);
     const [plantRes, setPlantRes] = React.useState();
     let plantID = props.plantId;
+    console.log(props);
     
   
 
@@ -25,9 +26,11 @@ function MoreInfoBtn(props) {
         <PlantInfo show={modalShow}
         onHide={() => setModalShow(false)}
         plantres={plantRes}
-        displayname={props.displayName}
+        displayName={props.displayName}
         img={props.img}
         user={props.user}
+        plantId={props.plantId}
+        
     />}
      
    </div>
