@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #f8f0d7;
+  background-color: #f8f0d7 !important;
 }
 
 .sublead {
@@ -85,32 +85,52 @@ height: 200px !important;
   font-family: 'Coustard', serif;
   color: #749C75 !important;
 }
-/* .monstera {
+
+
+
+/* start of palmleave code */
+
+
+.leftpalm-1 {
   width: 60%;
   position: absolute;
   z-index: 10;
   margin-top: 20%;
-   animation-duration: 10s;
-    animation-name: goRight;
-    animation-iteration-count: infinite;
+   animation-duration: 5s;
+    animation-name: goLeft;
+   animation-iteration-count:1;
+   animation-fill-mode: forwards;
+   transform-origin: bottom left;
   }
+
+  .leftpalm-2 {
+    width: 60%;
+    position: absolute;
+    z-index: 8;
+    margin-top: 20%;
+     animation-duration: 3.9s;
+      animation-name: goLeft;
+     animation-iteration-count:1;
+     animation-fill-mode: forwards;
+     transform-origin: bottom left;
+    }
   
-  @keyframes goRight {
+  @keyframes goLeft {
     from {
       transform: 
-      translate(-0,0)
+      /* translate(-0,0) */
       rotate(0deg);
     
     }
   
     to {
       transform: 
-      translate(-400px,400px)
-      rotate(-85deg);
+      /* translate(-400px,400px) */
+      rotate(-75deg);
       opacity: 100%;
 
     }
-  } */
+  }
 
 
 @media (prefers-reduced-motion: no-preference) {

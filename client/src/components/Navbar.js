@@ -100,7 +100,7 @@ function Navbar(props) {
             <form className="form-inline">
                 <div className="form-group mx-sm-3 mb-2">
                   <label htmlFor="plantSearch" className="sr-only">Search : </label>
-                  <input type="search" className="form-control" id="plantSearch" placeholder="Search by plant name..." onChange={e => setSearchTerm(e.target.value)}/>
+                  <input type="search" className="form-control" id="plantSearch" placeholder="Search by plant name..."onChange={e => setSearchTerm(e.target.value)}/>
                   {isSearching && <div>Searching...</div>}
                  
                 </div>

@@ -3,7 +3,8 @@ import Login from "../components/Login";
 import { GoogleLogin } from 'react-google-login';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import inbloom from "../images/inbloom.png";
-// import monstera1 from "../images/monstera1.png"
+import leftpalm from "../images/leftpalm.svg";
+import rightpalm from "../images/rightpalm.svg";
 import API from '../utils/API';
 const clientId = "21199057526-pc5p89vu1fos35ufcd9m597mmd84aq88.apps.googleusercontent.com";
 
@@ -34,7 +35,14 @@ function Home(props) {
     return(
      
         <div>
-            {/* <img className="monstera" src={monstera1}></img> */}
+
+            {/* left palm leaves */}
+            <img className="leftpalm-1" src={leftpalm}></img>
+            <img className="leftpalm-2" src={leftpalm}></img>
+
+            {/* right palm leaves */}
+
+            
             {/* the header of the homepage  */}
             <div className="jumbotron bg-transparent text-center">
                 <img className="inbloom" src={inbloom}></img>
