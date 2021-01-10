@@ -9,31 +9,14 @@ function InfoContainer(props) {
         <div>
           <h5>General Info</h5>
           <ul>
-            <li>Edible: {props.edible ? props.edible : "Not Available"}</li>
-            <li>Flower: {props.flower ? props.flower : "Not Available"}</li>
-            <li>
-              Growth Form:{" "}
-              {props.growthform ? props.growthform : "Not Available"}
-            </li>
-            <li>
-              Growth Habit:{" "}
-              {props.growthhabit ? props.growthhabit : "Not Available"}
-            </li>
-            <li>
-              Growth Rate:{" "}
-              {props.growthrate ? props.growthrate : "Not Available"}
-            </li>
-            <li>
-              Average Height:{" "}
-              {props.avgheight ? props.avgheight : "Not Available"}
-            </li>
-            <li>
-              Maximum Height:{" "}
-              {props.maxheight ? props.maxheight : "Not Available"}
-            </li>
-            <li>
-              Toxicity: {props.toxicity ? props.toxicity : "Not Available"}
-            </li>
+            {props.edible && <li>Edible: {props.edible}</li>}
+            {props.flower && <li>Flower: {props.flower}</li>}
+            {props.growthform && <li>Growth Form: {props.growthform}</li>}
+            {props.growthhabit && <li>Growth Habit: {props.growthhabit}</li>}
+            {props.growthrate && <li>Growth Rate: {props.growthrate}</li>}
+            {props.avgheight && <li>Average Height: {props.avgheight}</li>}
+            {props.maxheight && <li>Maximum Height: {props.maxheight}</li>}
+            {props.toxicity && <li>Toxicity: {props.toxicity}</li>}
           </ul>
         </div>
       )}
