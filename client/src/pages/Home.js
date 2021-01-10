@@ -41,8 +41,9 @@ function Home(props) {
             <img className="leftpalm-2" src={leftpalm}></img>
 
             {/* right palm leaves */}
+            <img className="rightpalm-1" src={rightpalm}></img>
+            <img className="rightpalm-2" src={rightpalm}></img>
 
-            
             {/* the header of the homepage  */}
             <div className="jumbotron bg-transparent text-center">
                 <img className="inbloom" src={inbloom}></img>
