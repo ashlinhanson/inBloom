@@ -4,19 +4,15 @@ import API from "../utils/API";
 function AddPlantBtn(props) {
 
     let data = {
-        common_name: props.displayname,
+        common_name: props.displayName,
         image_url: props.img,
         trefle_id: props.id,
-        UserId: props.UserId
+        UserId: props.user
     }
 
     function onClick () {
-        console.log(props);
-        
-        API.addPlant(props).then(res=>{
-            console.log("added to your garden!");
-            console.log("clicked");
-            console.log(props);
+        API.addPlant(data).then(res=>{
+            console.log(res.data.common_name + " added to your garden!");
             // we should add a toast or popup to show that the plant was added to the user's garden
         })
         
