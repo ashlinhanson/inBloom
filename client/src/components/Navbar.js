@@ -33,10 +33,8 @@ function Navbar(props) {
     useEffect(
       () => {
         const plantName = debouncedSearchTerm;
-        console.log("PLANT NAME" + plantName)
         // Make sure we have a value (user has entered something in input)
         if (debouncedSearchTerm) {
-          console.log("STUPID RESULTS" + debouncedSearchTerm);
           // Set isSearching state
           setIsSearching(true);
           setUserGarden(true);
@@ -114,7 +112,10 @@ function Navbar(props) {
             </form>
             </li>
             <li className="nav-item contact">
-              <Logout />
+              <Logout
+              user={props.user}
+              setUser={props.setUser}
+              />
             </li>
           </ul>
         </div>
