@@ -10,10 +10,10 @@ function CareContainer(props) {
           <h5>Care Info</h5>
           <ul>
           {(props.phmin && props.phmax) && `<li>pH Range: ${props.phmin} - ${props.phmax}</li>`}
-            {(props.light) && <li>Light: {props.light}</li>}
-            {props.bloommonths && `<li>Bloom Months: ${props.bloommonths}</li>`}
-            {props.growthmonths && `<li>Growth Months: ${props.growthmonths}</li>`}
-            {props.humidity && `<li>Humidity: ${props.humidity}</li>`}
+            {props.light && <li>Light: {props.light}</li>}
+            {props.bloommonths && <li>Bloom Months: {props.bloommonths}</li>}
+            {props.growthmonths && <li>Growth Months: {props.growthmonths}</li>}
+            {props.humidity && <li>Humidity: {props.humidity}</li>}
             {(props.minwater && props.maxwater) && `<li>Precipitation Range: ${props.minwater}mm - ${props.maxwater}mm</li>`}
             {props.rootdepth && `<li>Minimum Root Depth: ${props.rootdepth}cm</li>`}
             {(props.mintemp && props.maxtemp) && `<li>Temperature Range: ${props.mintemp}ºF - ${props.maxtemp}ºF</li>`}
