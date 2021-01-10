@@ -32,17 +32,20 @@ function PlantCard(props) {
         alt={props.plant.scientific_name}
         style={{ height: "350px" }}
       />
-      {props.isSearching && (
+
+      {!props.userGarden && (
         <AddPlantBtn
-          plant={props.plant}
-          displayName={displayName}
-          user={props.user}
-          img={img}
+          common_name={displayName}
+          img_url={img}
+          trefle_id={props.plant.id}
+          UserId={props.user}
+ 
         />
       )}
       <MoreInfoBtn
         plant={props.plant}
         plantId={props.plant.id}
+        trefle_id={props.plant.trefle_id}
         displayName={displayName}
         img={img}
         user={props.user}
