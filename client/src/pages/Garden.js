@@ -41,7 +41,9 @@ function Garden(props) {
          setIsSearching={setIsSearching} 
          setUserGarden={setUserGarden} 
          userGarden={userGarden} 
-         handleGetPlants={handleGetPlants} /> 
+         handleGetPlants={handleGetPlants}
+         user={props.user}
+         setUser={props.setUser} /> 
          <div id="plant-cards" className="row p-3 mb-5">
         
         {/* trigger a modal with belows results that you can add to the garden */}
