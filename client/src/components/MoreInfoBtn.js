@@ -10,7 +10,7 @@ function MoreInfoBtn(props) {
     
     let plantID;
 
-    if (props.trefle_id === null) {
+    if (typeof props.trefle_id === "undefined") {
       plantID = props.plantId;
     } else {
       plantID = props.trefle_id;
