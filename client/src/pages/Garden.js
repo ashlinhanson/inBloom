@@ -42,7 +42,8 @@ function Garden(props) {
 
 useEffect(() => {
 
-gsap.from('.plant-cards', {duration: 3, x:300, opacity:0})
+gsap.from('#plant-cards', {duration: 3, x:300, opacity:0})
+
 
 },
 []);
@@ -74,7 +75,7 @@ gsap.from('.plant-cards', {duration: 3, x:300, opacity:0})
 
       {/* this can show saved ones */}
       
-      <div className="container" style={{width: "fit-content"}}>
+      <div id="saved-plants" className="container" style={{width: "fit-content"}}>
             {garden.map(result => (
                <GardenCard key={result.id} plant={result} user={props.user.id} userGarden={userGarden} />
             ))}
