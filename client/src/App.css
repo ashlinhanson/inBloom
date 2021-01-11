@@ -320,19 +320,25 @@ height: 200px !important;
   border-radius: 20px !important;
   margin: 7px !important;
   color: #eee2db !important;
+  border: 3px solid #f8f0d7 !important;
 }
 
 .modalPhoto{
   border-radius: 20px !important;
   text-align: center !important;
+  border: 3px solid rgb(68, 68, 68);
 }
 
 .infoModal {
   text-align: center;
-  font-family: "Coustard" serif;
-  font-size: 18px;
+  border-radius: 20px !important;
+  overflow: hidden;
 }
 
 .infoList {
   text-align: left !important;
+}
+
+.modal-body, .modal-header, .modal-footer{
+  background-color: #f8f0d7 !important;
 }

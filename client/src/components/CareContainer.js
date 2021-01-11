@@ -7,7 +7,7 @@ function CareContainer(props) {
     <div>
       {props && (
         <div>
-          <h4 className="sublead">Care Info</h4>
+          <h4 className="sublead"><b>Care Info</b></h4>
           <ul className="text-left sublead">
           {(props.phmin && props.phmax) && <li>pH Range: {props.phmin} - {props.phmax}</li>}
             {props.light && <li>Light: {props.light}</li>}

@@ -7,7 +7,7 @@ function InfoContainer(props) {
     <div>
       {props && (
         <div>
-          <h5 className="sublead">General Info</h5>
+          <h5 className="sublead"><b>General Info</b></h5>
           <ul className="text-left sublead">
             {props.edible && <li>Edible: {props.edible}</li>}
             {props.flower && <li>Flower: {props.flower}</li>}

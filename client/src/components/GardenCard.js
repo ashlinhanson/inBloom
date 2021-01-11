@@ -24,7 +24,7 @@ function GardenCard(props) {
       key={props.plant.trefle_id}
       style={{ width: "350px" }}
     >
-      <h3 className="card-title">{displayname}</h3>
+      <h3 className="card-title"><b>{displayname}</b></h3>
       <img
         src={img}
         className="card-img-top mx-auto"

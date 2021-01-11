@@ -40,7 +40,7 @@ function PlantInfo(props) {
     <Modal
       {...props}
       size="lg"
-      className="infoModal"
+      className="infoModal rounded mb-0"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
