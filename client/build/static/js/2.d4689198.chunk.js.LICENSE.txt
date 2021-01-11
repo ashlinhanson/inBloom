@@ -30,6 +30,12 @@ object-assign
  * @author: Jack Doyle, jack@greensock.com
 */
 
+/*!
+ * vary
+ * Copyright(c) 2014-2017 Douglas Christopher Wilson
+ * MIT Licensed
+ */
+
 /** @license React v0.20.1
  * scheduler.production.min.js
  *
