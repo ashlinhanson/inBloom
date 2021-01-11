@@ -7,19 +7,9 @@ import Button from "../components/Button";
 
 function Navbar(props) {
 
-    // const [searchState, setSearchState] = useState({
-    //   plantName : " ",
-    //   searchResults : []
-    // })
     // State and setter for search term
     const [searchTerm, setSearchTerm] = useState('');
-  
-    // State for search status (whether there is a pending API request)
-    const [isSearching, setIsSearching] = useState(false);
-
-    const [userGarden, setUserGarden] = useState(true);
     
-
     // Now we call our hook, passing in the current searchTerm value.
     // The hook will only return the latest value (what we passed in) ...
     // ... if it's been more than 500ms since it was last called.
@@ -36,16 +26,15 @@ function Navbar(props) {
         // Make sure we have a value (user has entered something in input)
         if (debouncedSearchTerm) {
           // Set isSearching state
-          setIsSearching(true);
-          setUserGarden(true);
+          props.setIsSearching(true);
+          props.setUserGarden(true);
           // Fire off our API call
           API.searchPlants(plantName).then(results => {
             // Set back to false since request finished
-            setIsSearching(false);
+            props.setIsSearching(true);
             // Set results state
-            console.log(results.data)
             props.setResults(results.data);
-            props.setIsSearching(false);
+            // props.setIsSearching(false);
             props.setUserGarden(false);
           
           });
@@ -71,18 +60,6 @@ function Navbar(props) {
         tl.from('.contact', { x: 15, opacity: 0, ease: Power3.easeOut, delay: 0.3 }, 'Start')
     }, []);
 
-    // function handleFormSubmit() {
-    //   API.searchPlants(searchState.plantName, (result, err) => {
-    //     if (!err) {
-    //       const searchResults = result.map((plant) => {
-    //         <option value={plant.plantName}></option>
-    //       })
-    //     }
-    //   })
-
-    // };
-
-
     return (
 
       <nav id="navbar" className="navbar navbar-expand-lg navbar-light bg-light mt-n5">
@@ -99,16 +76,9 @@ function Navbar(props) {
                 <div className="form-group mx-sm-3 mb-2">
                   <label htmlFor="plantSearch" className="sr-only">Search : </label>
                   <input type="search" className="form-control" id="plantSearch" placeholder="Search by plant name..." onChange={e => setSearchTerm(e.target.value)}/>
-                  {isSearching && <div>Searching...</div>}
+                  {props.isSearching && <div> Searching... </div>}
                  
                 </div>
-                {/* <button 
-                  type="submit" 
-                  class="btn btn-success mb-2 mx-4"
-                  // onClick={handleFormSubmit}
-                  >
-                    Search Plants
-                </button> */}
             </form>
             </li>
             <li className="nav-item contact">

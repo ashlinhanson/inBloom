@@ -11,7 +11,7 @@ function Logout(props) {
 
     if (show) {
         return (
-        <Alert variant="warning" onClose={() => {setShow(false); props.setUser(null)}} dismissible>
+        <Alert variant="success" onClose={() => {setShow(false); props.setUser(null)}} dismissible>
             <Alert.Heading>Log out successful!</Alert.Heading>
             <p>
             We'll see you soon! 🌱

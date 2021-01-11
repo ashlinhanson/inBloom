@@ -36,7 +36,9 @@ body {
 .garden-jumbo {
 align-content: center;
 text-align: center;
-  background-color: #749C75 !important;
+background-color: #749C75 !important;
+font-family: 'Cooper-black-std', serif;
+font-size: 6rem !important; 
 }
 
 .garden-body {
@@ -62,7 +64,7 @@ background:  #F8F0D7 !important;
 }
 
 .card {
-  text-align: center;
+text-align: center;
 background-color: #EA8955 !important;
 border-radius: 20px !important;
 }
@@ -141,4 +143,10 @@ height: 200px !important;
   to {
     transform: rotate(360deg);
   }
+}
+
+.Btn {
+  background-color: #749C75 !important;
+  border-radius: 20px !important;
+  margin: 7px !important;
 }
