@@ -4,6 +4,7 @@ import { gsap, TimelineLite, Power3 } from 'gsap';
 import Logout from './Logout';
 import API from '../utils/API';
 import Button from "../components/Button";
+import e from 'cors';
 
 function Navbar(props) {
 
@@ -41,7 +42,6 @@ function Navbar(props) {
         } else {
           props.setResults([]);
         }
-
       },
       // This is the useEffect input array
       // Our useEffect function will only execute if this value changes ...
@@ -49,7 +49,11 @@ function Navbar(props) {
       // value (searchTerm) hasn't changed for more than 500ms.
       [debouncedSearchTerm]
     );
-
+      function getSearchTerm (e){
+        e.preventDefault();
+        setSearchTerm(e.target.value)
+        console.log("this is this")
+      }
 
     let tl = new TimelineLite({ delay: 0.8 })
 
@@ -74,10 +78,10 @@ function Navbar(props) {
           <ul className="navbar-nav">
             
             <li className="nav-item active search">
-            <form className="form-inline">
+            <form className="form-inline" onSubmit={e => e.preventDefault()}>
                 <div className="form-group mx-sm-3 mb-2">
                   <label htmlFor="plantSearch" className="sr-only">Search : </label>
-                  <input type="search" className="form-control" id="plantSearch" placeholder="Search by plant name..." onChange={e => setSearchTerm(e.target.value)}/>
+                  <input type="search" className="form-control" id="plantSearch" placeholder="Search by plant name..." onChange={e => getSearchTerm(e)}/>
                   {props.isSearching && <div> Searching... </div>}
                  
                 </div>
