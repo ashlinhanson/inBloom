@@ -329,6 +329,8 @@ height: 200px !important;
 
 .infoModal {
   text-align: center;
+  font-family: "Coustard" serif;
+  font-size: 18px;
 }
 
 .infoList {

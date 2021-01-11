@@ -45,7 +45,7 @@ function PlantInfo(props) {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
+        <Modal.Title id="contained-modal-title-vcenter" className="lead mx-auto">
           {props.displayname} {sciName}
         </Modal.Title>
       </Modal.Header>
