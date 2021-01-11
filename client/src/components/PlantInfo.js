@@ -102,11 +102,13 @@ function PlantInfo(props) {
       </Modal.Body>
       <Modal.Footer>
         <button onClick={props.onHide} className="Btn sublead">Close</button>
-        <AddPlantBtn 
-        displayname={props.displayname}
-        image_url={props.img}
-        plant={props.plantres}
-        userId={props.user}/>
+        {props.addbtn === "yes" &&
+          <AddPlantBtn 
+          displayname={props.displayname}
+          image_url={props.img}
+          plant={props.plantres}
+          userId={props.user}/>
+        }
       </Modal.Footer>
     </Modal>
   );

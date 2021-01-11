@@ -10,12 +10,14 @@ function MoreInfoBtn(props) {
 
     
     let plantID;
+    let addBtn;
 
     if (props.trefle_id) {
         plantID = props.trefle_id;
-        
+        addBtn = "no"
     } else {
         plantID = props.plantId;
+        addBtn= "yes"
     }
   
 
@@ -30,14 +32,15 @@ function MoreInfoBtn(props) {
        More Info
      </button>
         {plantRes &&
-        <PlantInfo show={modalShow}
-        onHide={() => setModalShow(false)}
-        plantres={plantRes}
-        displayname={props.displayname}
-        img={props.img}
-        user={props.user}
-    />}
-     
+          <PlantInfo show={modalShow}
+            onHide={() => setModalShow(false)}
+            plantres={plantRes}
+            displayname={props.displayname}
+            img={props.img}
+            user={props.user}
+            addbtn={addBtn}
+          />
+        }
    </div>
  );
 }

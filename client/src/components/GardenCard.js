@@ -20,7 +20,7 @@ function GardenCard(props) {
   
   return (
     <div
-      className="card m-2 p-2"
+      className="card m-4 p-4"
       key={props.plant.trefle_id}
       style={{ width: "350px" }}
     >

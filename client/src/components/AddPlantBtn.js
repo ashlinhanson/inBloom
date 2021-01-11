@@ -3,6 +3,7 @@ import API from "../utils/API";
 import "../App.css";
 
 function AddPlantBtn(props) {
+    const [buttonMsg, setButtonMsg] = React.useState("Add to Your Garden");
 
     let data = {
         common_name: props.displayname,
@@ -16,12 +17,13 @@ function AddPlantBtn(props) {
             console.log(res.data.common_name + " added to your garden!");
             // we should add a toast or popup to show that the plant was added to the user's garden
         })
-        
+        setButtonMsg("Added Successfully!")
+
     };
       
     return (
         <div>
-            <button className="Btn btn sublead" onClick={() => onClick()}>Add to Your Garden</button>
+            <button className="Btn btn sublead" onClick={() => onClick()} >{buttonMsg}</button>
         </div>
     )
 

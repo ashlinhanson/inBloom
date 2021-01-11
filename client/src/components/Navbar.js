@@ -4,6 +4,7 @@ import { gsap, TimelineLite, Power3 } from 'gsap';
 import Logout from './Logout';
 import API from '../utils/API';
 import Button from "../components/Button";
+import e from 'cors';
 
 function Navbar(props) {
 
@@ -41,7 +42,6 @@ function Navbar(props) {
         } else {
           props.setResults([]);
         }
-
       },
       // This is the useEffect input array
       // Our useEffect function will only execute if this value changes ...
@@ -49,7 +49,11 @@ function Navbar(props) {
       // value (searchTerm) hasn't changed for more than 500ms.
       [debouncedSearchTerm]
     );
-
+      function getSearchTerm (e){
+        e.preventDefault();
+        setSearchTerm(e.target.value)
+        console.log("this is this")
+      }
 
     let tl = new TimelineLite({ delay: 0.8 })
 
@@ -61,7 +65,7 @@ function Navbar(props) {
     }, []);
 
     return (
-
+      <div>
       <nav id="navbar" className="navbar navbar-expand-lg navbar-light bg-light mt-n5">
         <a id="navbar-title" className="navbar-brand homes text-success" href="#">inBloom</a>
         {/* {props.userGarden && <button>Back to Garden</button>}   */}
@@ -69,13 +73,15 @@ function Navbar(props) {
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
+          
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
+            
             <li className="nav-item active search">
-            <form className="form-inline">
+            <form className="form-inline" onSubmit={e => e.preventDefault()}>
                 <div className="form-group mx-sm-3 mb-2">
                   <label htmlFor="plantSearch" className="sr-only">Search : </label>
-                  <input type="search" className="form-control" id="plantSearch" placeholder="Search by plant name..." onChange={e => setSearchTerm(e.target.value)}/>
+                  <input type="search" className="form-control" id="plantSearch" placeholder="Search by plant name..." onChange={e => getSearchTerm(e)}/>
                   {props.isSearching && <div> Searching... </div>}
                  
                 </div>
@@ -90,7 +96,13 @@ function Navbar(props) {
           </ul>
         </div>
       </nav>
-
+    
+      {props.isSearching &&
+        <div className="mx-auto text-center sublead">    
+        <h1><b>Search Results</b></h1>
+        </div>
+      }
+      </div>
     )
 };
 

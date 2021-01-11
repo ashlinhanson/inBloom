@@ -56,31 +56,31 @@ gsap.from('#plant-cards', {duration: 3, x:300, opacity:0})
             <img className="gardenHeader" src={yourgarden}></img>
          </div>
          <Navbar setResults={setResults} 
-         results={results} 
-         setIsSearching={setIsSearching} 
-         setUserGarden={setUserGarden} 
-         userGarden={userGarden} 
-         handleGetPlants={handleGetPlants}
-         user={props.user}
-         setUser={props.setUser} /> 
-         <div id="plant-cards" className="row p-3 mb-5">
-        
-        {/* trigger a modal with belows results that you can add to the garden */}
-
-         {isSearching && results.map(result => (
-                    
-            <SearchCard key={result.id} plant={result} user={props.user.id} userGarden={userGarden} />
-               
-         ))}
-
-      {/* this can show saved ones */}
+            results={results} 
+            isSearching={isSearching}
+            setIsSearching={setIsSearching} 
+            setUserGarden={setUserGarden} 
+            userGarden={userGarden} 
+            handleGetPlants={handleGetPlants}
+            user={props.user}
+            setUser={props.setUser} 
+         /> 
+         
+         <div id="plant-cards" className="row p-3 mb-5 col-md-10 mx-auto">
+            
+            {isSearching && results.map(result => (
+                     
+               <SearchCard key={result.id} plant={result} user={props.user.id} userGarden={userGarden} />
+                  
+            ))}
+         </div>
       
-      <div id="saved-plants" className="container" style={{width: "fit-content"}}>
+         <div id="saved-plants" className="container row p-5 m-3 mx-auto col-md-8">
             {garden.map(result => (
                <GardenCard key={result.id} plant={result} user={props.user.id} userGarden={userGarden} />
             ))}
-        </div>
-        </div>
+         </div>
+         
       </div>
    )
 
