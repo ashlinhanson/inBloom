@@ -321,3 +321,12 @@ height: 200px !important;
   margin: 7px !important;
   color: #eee2db !important;
 }
+
+.modalPhoto{
+  border-radius: 20px !important;
+  text-align: center !important;
+}
+
+.infoModal {
+  text-align: center;
+}

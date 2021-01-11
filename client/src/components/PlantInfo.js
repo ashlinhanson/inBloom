@@ -3,6 +3,8 @@ import AddPlantBtn from "./AddPlantBtn";
 import InfoContainer from "./InfoContainer";
 import Modal from "react-bootstrap/Modal";
 import CareContainer from "./CareContainer";
+import "../App.css";
+
 function PlantInfo(props) {
   let sciName = "";
   let edible = "";
@@ -38,6 +40,7 @@ function PlantInfo(props) {
     <Modal
       {...props}
       size="lg"
+      className="infoModal"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
@@ -47,9 +50,9 @@ function PlantInfo(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <img src={props.img} alt="plant" style={{ width: "400px" }} className="mx-auto"></img>
+        <img src={props.img} alt="plant" style={{ width: "400px" }} className="text-center modalPhoto"></img>
         <InfoContainer
-          id="infoContainer"
+          id="infoContainer" className="text-center"
           edible={edible}
           // distribution={props.plantres.data.main_species.native}
           flower={props.plantres.data.main_species.flower.color}
