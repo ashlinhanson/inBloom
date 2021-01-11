@@ -1,7 +1,7 @@
 import React from "react";
 import PlantInfo from "./PlantInfo";
-import Button from "react-bootstrap/Button";
 import API from "../utils/API";
+import "../App.css";
 
 
 function MoreInfoBtn(props) {
@@ -11,14 +11,12 @@ function MoreInfoBtn(props) {
     
     let plantID;
 
-    if (typeof props.trefle_id === "undefined") {
-      plantID = props.plantId;
+    if (props.trefle_id) {
+        plantID = props.trefle_id;
+        
     } else {
-      plantID = props.trefle_id;
+        plantID = props.plantId;
     }
-    
-
-    
   
 
     function getInfo () {
@@ -28,14 +26,14 @@ function MoreInfoBtn(props) {
     }
  return (
    <div>
-     <Button variant="primary" onClick={() => [setModalShow(true), getInfo()]}>
+     <button className="Btn btn sublead" onClick={() => [setModalShow(true), getInfo()]}>
        More Info
-     </Button>
+     </button>
         {plantRes &&
         <PlantInfo show={modalShow}
         onHide={() => setModalShow(false)}
         plantres={plantRes}
-        displayname={props.displayName}
+        displayname={props.displayname}
         img={props.img}
         user={props.user}
     />}

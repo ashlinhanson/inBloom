@@ -1,16 +1,15 @@
 import React from "react";
 import MoreInfoBtn from "./MoreInfoBtn";
-import AddPlantBtn from "./AddPlantBtn";
 import fakeImg from "../images/planty.jpg";
 
-function PlantCard(props) {
-  let displayName;
+function GardenCard(props) {
+  let displayname;
   let img;
 
   if (props.plant.common_name) {
-    displayName = props.plant.common_name;
+    displayname = props.plant.common_name;
   } else {
-    displayName = props.plant.scientific_name;
+    displayname = props.plant.scientific_name;
   }
 
   if (!props.plant.image_url) {
@@ -22,28 +21,20 @@ function PlantCard(props) {
   return (
     <div
       className="card m-2 p-2"
-      key={props.plant.id}
+      key={props.plant.trefle_id}
       style={{ width: "350px" }}
     >
-      <h3 className="card-title">{displayName}</h3>
+      <h3 className="card-title">{displayname}</h3>
       <img
         src={img}
-        className="card-img-top"
+        className="card-img-top mx-auto"
         alt={props.plant.scientific_name}
         style={{ height: "350px" }}
       />
-      {props.isSearching && (
-        <AddPlantBtn
-          plant={props.plant}
-          displayName={displayName}
-          user={props.user}
-          img={img}
-        />
-      )}
       <MoreInfoBtn
         plant={props.plant}
-        plantId={props.plant.id}
-        displayName={displayName}
+        trefle_id={props.plant.trefle_id}
+        displayname={displayname}
         img={img}
         user={props.user}
       />
@@ -51,4 +42,4 @@ function PlantCard(props) {
   );
 }
 
-export default PlantCard;
+export default GardenCard;

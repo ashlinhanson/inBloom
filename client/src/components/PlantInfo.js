@@ -2,7 +2,6 @@ import React from "react";
 import AddPlantBtn from "./AddPlantBtn";
 import InfoContainer from "./InfoContainer";
 import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
 import CareContainer from "./CareContainer";
 function PlantInfo(props) {
   let sciName = "";
@@ -48,7 +47,7 @@ function PlantInfo(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <img src={props.img} alt="plant" style={{ width: "400px" }}></img>
+        <img src={props.img} alt="plant" style={{ width: "400px" }} className="mx-auto"></img>
         <InfoContainer
           id="infoContainer"
           edible={edible}
@@ -99,8 +98,12 @@ function PlantInfo(props) {
         ></CareContainer>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-        <AddPlantBtn />
+        <button onClick={props.onHide} className="Btn sublead">Close</button>
+        <AddPlantBtn 
+        displayname={props.displayname}
+        image_url={props.img}
+        plant={props.plantres}
+        userId={props.user}/>
       </Modal.Footer>
     </Modal>
   );
