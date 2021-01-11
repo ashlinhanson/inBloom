@@ -330,3 +330,7 @@ height: 200px !important;
 .infoModal {
   text-align: center;
 }
+
+.infoList {
+  text-align: left !important;
+}

@@ -8,7 +8,7 @@ function InfoContainer(props) {
       {props && (
         <div>
           <h5>General Info</h5>
-          <ul>
+          <ul className="text-left">
             {props.edible && <li>Edible: {props.edible}</li>}
             {props.flower && <li>Flower: {props.flower}</li>}
             {props.growthform && <li>Growth Form: {props.growthform}</li>}
