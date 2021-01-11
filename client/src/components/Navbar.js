@@ -61,7 +61,7 @@ function Navbar(props) {
     }, []);
 
     return (
-
+      <div>
       <nav id="navbar" className="navbar navbar-expand-lg navbar-light bg-light mt-n5">
         <a id="navbar-title" className="navbar-brand homes text-success" href="#">inBloom</a>
         {/* {props.userGarden && <button>Back to Garden</button>}   */}
@@ -69,8 +69,10 @@ function Navbar(props) {
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
+          
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
+            
             <li className="nav-item active search">
             <form className="form-inline">
                 <div className="form-group mx-sm-3 mb-2">
@@ -90,7 +92,13 @@ function Navbar(props) {
           </ul>
         </div>
       </nav>
-
+    
+      {props.isSearching &&
+        <div className="mx-auto text-center sublead">    
+        <h1><b>Search Results</b></h1>
+        </div>
+      }
+      </div>
     )
 };
 
