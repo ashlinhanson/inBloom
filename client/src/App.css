@@ -84,10 +84,15 @@ height: 200px !important;
 #login-container {
   /* height: 200px; */
   /* width: 200px; */
+  
   background-color: #EA8955 !important;
   border-radius: 20px !important;
 }
 
+
+#googleBtn {
+  display: flex !important;
+}
 
 #navbar {
   font-family: 'Coustard', serif;

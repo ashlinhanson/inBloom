@@ -39,7 +39,9 @@ function MoreInfoBtn(props) {
             displayname={props.displayname}
             img={props.img}
             user={props.user}
+            setModalShow={setModalShow}
             addbtn={addBtn}
+            setGarden={props.setGarden}
           />
         }
    </div>
