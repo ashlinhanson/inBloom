@@ -71,6 +71,7 @@ gsap.from('#plant-cards', {duration: 3, x:300, opacity:0})
             {isSearching && results.map(result => (
                      
                <SearchCard 
+                  setGarden={setGarden}
                   key={result.id} 
                   plant={result} 
                   user={props.user.id} 
