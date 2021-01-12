@@ -19,7 +19,7 @@ function DeleteBtn(props) {
 
   return (
     <div>
-      <button className="btn btn sublead" onClick={() => onClick()} >{buttonMsg}</button>
+      <button className="Btn btn sublead" onClick={() => onClick()} >{buttonMsg}</button>
     </div>
   )
 }
