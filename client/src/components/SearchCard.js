@@ -35,6 +35,7 @@ function SearchCard(props) {
       
       <AddPlantBtn
         plant={props.plant}
+        plantid={props.plant.id}
         displayname={displayname}
         userId={props.user}
         img={img}
