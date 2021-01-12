@@ -104,8 +104,9 @@ function PlantInfo(props) {
         <button onClick={props.onHide} className="Btn sublead">Close</button>
         {props.addbtn === "yes" &&
           <AddPlantBtn 
+          plantid={props.plantid}
           displayname={props.displayname}
-          image_url={props.img}
+          img={props.img}
           plant={props.plantres}
           userId={props.user}/>
         }

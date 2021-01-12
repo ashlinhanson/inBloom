@@ -33,7 +33,7 @@ function GardenCard(props) {
       />
       <MoreInfoBtn
         plant={props.plant}
-        trefle_id={props.plant.trefle_id}
+        plantid={props.plant.trefle_id}
         displayname={displayname}
         img={img}
         user={props.user}
