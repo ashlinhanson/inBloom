@@ -1,7 +1,7 @@
 import React from "react";
 import MoreInfoBtn from "./MoreInfoBtn";
 import AddPlantBtn from "./AddPlantBtn";
-import fakeImg from "../images/planty.jpg";
+import fakeImg from "../images/no-plant.png";
 
 function SearchCard(props) {
   let displayname;
