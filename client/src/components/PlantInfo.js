@@ -104,6 +104,7 @@ function PlantInfo(props) {
         <button onClick={props.onHide} className="Btn sublead">Close</button>
         {props.addbtn === "yes" &&
           <AddPlantBtn 
+          setModalShow={props.setModalShow}
           setGarden={props.setGarden}
           plantid={props.plantid}
           displayname={props.displayname}

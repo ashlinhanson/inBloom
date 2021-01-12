@@ -19,6 +19,10 @@ function AddPlantBtn(props) {
              //updates state of garden and rerenders saved plants
 
             props.setGarden(oldGarden => {return[...oldGarden, data]});
+
+
+
+            props.setModalShow && props.setModalShow(false)
             // we should add a toast or popup to show that the plant was added to the user's garden
         })
         setButtonMsg("Added Successfully!")
