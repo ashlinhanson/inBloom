@@ -1,6 +1,7 @@
 import React from "react";
 import MoreInfoBtn from "./MoreInfoBtn";
 import fakeImg from "../images/planty.jpg";
+import DeleteBtn from "../components/DeleteBtn";
 
 function GardenCard(props) {
   let displayname;
@@ -37,6 +38,9 @@ function GardenCard(props) {
         displayname={displayname}
         img={img}
         user={props.user}
+      />
+      <DeleteBtn
+        plant={props.plant}
       />
     </div>
   );

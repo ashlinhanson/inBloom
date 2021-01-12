@@ -22,13 +22,15 @@ module.exports = {
   },
 
   remove: function(req, res) {
+    console.log(req);
     db.Plant.destroy({
       where: {
         id: req.params.id
       }
     })
       .then(function(dbModel) {
-        res.json("Removed " + dbModel + " from database");
+        console.log("This is the dbModel" + dbModel);
+        res.json(dbModel);
       });
   }
 
