@@ -40,6 +40,7 @@ function MoreInfoBtn(props) {
             img={props.img}
             user={props.user}
             addbtn={addBtn}
+            setGarden={props.setGarden}
           />
         }
    </div>

@@ -43,6 +43,7 @@ function SearchCard(props) {
       />
       
       <MoreInfoBtn
+        setGarden={props.setGarden}
         plant={props.plant}
         plantId={props.plant.id}
         displayname={displayname}
