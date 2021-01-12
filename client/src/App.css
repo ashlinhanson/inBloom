@@ -8,7 +8,9 @@
 }
 
 body {
-  background-color: #f8f0d7 !important;
+  background-image: url(./images/inbloom-background-01.png);
+  background-size:cover;
+  ;
 }
 
 .sublead {
@@ -80,10 +82,10 @@ height: 200px !important;
 
 
 #login-container {
-  height: 200px;
-  width: 200px;
-background-color: #EA8955 !important;
-border-radius: 20px !important;
+  /* height: 200px; */
+  /* width: 200px; */
+  background-color: #EA8955 !important;
+  border-radius: 20px !important;
 }
 
 
@@ -119,7 +121,20 @@ border-radius: 20px !important;
   width: 90px;
   position: absolute;
   z-index: -2;
-  margin-left: 32%;
+  transform: rotate(90deg);
+  margin-top: 20%;
+  margin-left: 10%;
+  justify-content: center;
+}
+
+
+#plant4 {
+  width: 90px;
+  position: absolute;
+  z-index: -2;
+  transform: rotate(90deg);
+  margin-top: 20%;
+  margin-left: 10%;
   justify-content: center;
 }
 
@@ -376,4 +391,8 @@ border-radius: 20px !important;
 
 .modal-body, .modal-header, .modal-footer{
   background-color: #f8f0d7 !important;
+}
+
+#googleBtn {
+  width: fit-content !important;
 }
