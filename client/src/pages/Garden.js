@@ -77,7 +77,13 @@ gsap.from('#plant-cards', {duration: 3, x:300, opacity:0})
       
          <div id="saved-plants" className="container row p-5 m-3 mx-auto col-md-8">
             {garden.map(result => (
-               <GardenCard key={result.id} plant={result} user={props.user.id} userGarden={userGarden} />
+               <GardenCard 
+                  key={result.id} 
+                  handleGetPlants={handleGetPlants} 
+                  plant={result} 
+                  user={props.user.id} 
+                  userGarden={userGarden} 
+               />
             ))}
          </div>
          

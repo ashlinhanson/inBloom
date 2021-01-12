@@ -28,7 +28,7 @@ module.exports = {
       }
     })
       .then(function(dbModel) {
-        res.json("Removed " + dbModel + " from database");
+        res.json(dbModel);
       });
   }
 

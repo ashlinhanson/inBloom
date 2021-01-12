@@ -22,6 +22,10 @@ export default {
     return axios.post("/api/user", userData)
   },
 
+  deletePlant: function (plantData) {
+    return axios.delete(`/api/plant/${plantData}`, {data: { id: plantData }}) 
+  },
+
   searchUserById: function (id) {
     return axios.get("/api/user/" + id)
   }
