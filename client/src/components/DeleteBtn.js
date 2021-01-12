@@ -10,7 +10,10 @@ function DeleteBtn(props) {
     API.deletePlant(props.plant.id).then(res => {
       setButtonMsg("Successfully Deleted");
       // console.log(handleGetPlants(props.user.id));
-      props.handleGetPlants(props.user.id);
+        setTimeout(function removeFromGarden()
+        {
+          props.handleGetPlants(props.user.id);
+        }, 1000);
     })
   };
 
