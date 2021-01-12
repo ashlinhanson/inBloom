@@ -41,6 +41,9 @@ function GardenCard(props) {
       />
       <DeleteBtn
         plant={props.plant}
+        userGarden={props.userGarden}
+        user={props.user}
+        handleGetPlants={props.handleGetPlants}
       />
     </div>
   );
