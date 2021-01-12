@@ -42,6 +42,7 @@ function Home(props) {
 useEffect(() => {
 
     gsap.from('.inbloom', {duration:4, opacity:0})
+    gsap.from('#login-container', {duration:4, opacity:0})
     gsap.to('.leftpalm-1', { duration: 4, ease: "slow.out", transformOrigin: 'left bottom', rotate: -75 })
     gsap.to('.leftpalm-2', { duration: 3, ease: "slow.out", transformOrigin: 'left bottom', rotate: -75 })
     gsap.to('.leftpalm-3', { duration: 2, ease: "slow.out", transformOrigin: 'left bottom', rotate: -75 })
@@ -93,7 +94,7 @@ useEffect(() => {
             <img id="plant1" src={plant1}></img>
             <img id="plant2" src={plant2}></img>
             {/* <img id="plant3" src={flower}></img> */}
-            <div className="container col-3 mx-auto text-center" id="login-container">
+            <div className="container col-10 col-md-3 mx-auto text-center" id="login-container">
                 {/* <h3 className="lead m-5">Sign In</h3> */}
                 <div className="align-middle mx-auto p-5" id="googleBtn">
                     { !props.user && <GoogleLogin 
