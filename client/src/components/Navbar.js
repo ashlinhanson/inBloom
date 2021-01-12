@@ -66,15 +66,12 @@ function Navbar(props) {
 
     return (
       <div>
-      <nav id="navbar" className="navbar navbar-expand-lg navbar-light bg-light mt-n5">
+      <nav id="navbar" className="navbar navbar-light bg-light mt-n5">
         <a id="navbar-title" className="navbar-brand homes text-success">inBloom</a>
         {/* {props.userGarden && <button>Back to Garden</button>}   */}
         {!props.userGarden && <Button text="Back to Garden" id="back-to-garden-btn" className="btn btn-outline-success" onClick={props.handleGetPlants}/>}
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
           
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div className="navbar justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
             
             <li className="nav-item active search">
@@ -85,13 +82,13 @@ function Navbar(props) {
                   {props.isSearching && <div> Searching... </div>}
                  
                 </div>
-            </form>
-            </li>
-            <li className="nav-item contact">
+                <li className="nav-item contact">
               <Logout
               user={props.user}
               setUser={props.setUser}
               />
+            </li>
+            </form>
             </li>
           </ul>
         </div>
