@@ -67,7 +67,7 @@ function Navbar(props) {
     return (
       <div>
       <nav id="navbar" className="navbar navbar-expand-lg navbar-light bg-light mt-n5">
-        <a id="navbar-title" className="navbar-brand homes text-success" href="#">inBloom</a>
+        <a id="navbar-title" className="navbar-brand homes text-success">inBloom</a>
         {/* {props.userGarden && <button>Back to Garden</button>}   */}
         {!props.userGarden && <Button text="Back to Garden" id="back-to-garden-btn" className="btn btn-outline-success" onClick={props.handleGetPlants}/>}
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,7 +78,7 @@ function Navbar(props) {
           <ul className="navbar-nav">
             
             <li className="nav-item active search">
-            <form className="form-inline" onSubmit={e => e.preventDefault()}>
+            <form className="form-inline" onSubmit={e}>
                 <div className="form-group mx-sm-3 mb-2">
                   <label htmlFor="plantSearch" className="sr-only">Search : </label>
                   <input type="search" className="form-control" id="plantSearch" placeholder="Search by plant name..." onChange={e => getSearchTerm(e)}/>
