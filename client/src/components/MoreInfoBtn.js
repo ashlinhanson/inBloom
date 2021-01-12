@@ -15,7 +15,6 @@ function MoreInfoBtn(props) {
     if (props.plant.trefle_id) {
         plantID = props.plant.trefle_id;
         addBtn = "no"
-        console.log("ididid " + plantID)
     } else {
         plantID = props.plantId;
         addBtn= "yes"
