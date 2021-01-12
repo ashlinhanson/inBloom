@@ -102,41 +102,27 @@ height: 200px !important;
 
 
 #plant1 {
-  width: 90px;
+  width: 150px;
   position: absolute;
   z-index: -2;
-  margin-left: 61%;
+  margin-left: 60%;
+  margin-top: -68px;
   justify-content: center;
 }
 
 #plant2 {
-  width: 90px;
+  transform: rotate(-20deg);
+  width: 150px;
   position: absolute;
   z-index: -2;
-  margin-left: 32%;
-  justify-content: center;
-}
-
-#plant3 {
-  width: 90px;
-  position: absolute;
-  z-index: -2;
-  transform: rotate(90deg);
-  margin-top: 20%;
-  margin-left: 10%;
+  margin-top: -50px;
+  margin-left: 28%;
   justify-content: center;
 }
 
 
-#plant4 {
-  width: 90px;
-  position: absolute;
-  z-index: -2;
-  transform: rotate(90deg);
-  margin-top: 20%;
-  margin-left: 10%;
-  justify-content: center;
-}
+
+
 
 
 
