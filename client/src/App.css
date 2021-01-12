@@ -69,6 +69,7 @@ background-color: #EA8955 !important;
 border-radius: 20px !important;
 }
 
+
 .card-img-top {
 border-radius: 20px !important;
 text-align: center !important;
@@ -76,6 +77,15 @@ width: 200px !important;
 height: 200px !important;
 
 }
+
+
+#login-container {
+  height: 200px;
+  width: 200px;
+background-color: #EA8955 !important;
+border-radius: 20px !important;
+}
+
 
 #navbar {
   font-family: 'Coustard', serif;
@@ -86,6 +96,31 @@ height: 200px !important;
 #navbar-title {
   font-family: 'Coustard', serif;
   color: #749C75 !important;
+}
+
+
+#plant1 {
+  width: 90px;
+  position: absolute;
+  z-index: -2;
+  margin-left: 61%;
+  justify-content: center;
+}
+
+#plant2 {
+  width: 90px;
+  position: absolute;
+  z-index: -2;
+  margin-left: 32%;
+  justify-content: center;
+}
+
+#plant3 {
+  width: 90px;
+  position: absolute;
+  z-index: -2;
+  margin-left: 32%;
+  justify-content: center;
 }
 
 

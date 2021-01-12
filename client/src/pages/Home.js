@@ -7,6 +7,8 @@ import inbloom from "../images/inbloom.png";
 import leftpalm from "../images/leftpalm.svg";
 import rightpalm from "../images/rightpalm.svg";
 import API from '../utils/API';
+import plant1 from '../images/plant1.png';
+import plant2 from '../images/plant2.png';
 
 const clientId = "21199057526-pc5p89vu1fos35ufcd9m597mmd84aq88.apps.googleusercontent.com";
 
@@ -87,6 +89,9 @@ useEffect(() => {
                 
             </div>
             {/* the google sign in button/established users */}
+            <img id="plant1" src={plant1}></img>
+            <img id="plant2" src={plant2}></img>
+            <div className="card mx-auto col-3">
             <div className="container m-5 col-4 mx-auto text-center">
                 {/* <h3 className="lead m-5">Sign In</h3> */}
                 
@@ -110,6 +115,7 @@ useEffect(() => {
                 </button> */}
 
 
+            </div>
             </div>
         </div>
     )
