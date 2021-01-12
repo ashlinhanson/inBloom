@@ -7,6 +7,9 @@ import inbloom from "../images/inbloom.png";
 import leftpalm from "../images/leftpalm.svg";
 import rightpalm from "../images/rightpalm.svg";
 import API from '../utils/API';
+import plant1 from '../images/plant1.png';
+import plant2 from '../images/plant2.png';
+import flower from '../images/flower.png';
 
 const clientId = "21199057526-pc5p89vu1fos35ufcd9m597mmd84aq88.apps.googleusercontent.com";
 
@@ -87,19 +90,22 @@ useEffect(() => {
                 
             </div>
             {/* the google sign in button/established users */}
-            <div className="container m-5 col-4 mx-auto text-center">
+            <img id="plant1" src={plant1}></img>
+            <img id="plant2" src={plant2}></img>
+            {/* <img id="plant3" src={flower}></img> */}
+            <div className="container col-3 mx-auto text-center" id="login-container">
                 {/* <h3 className="lead m-5">Sign In</h3> */}
-                
-               { !props.user && <GoogleLogin 
-                setUser={props.setUser}
-                clientId={clientId}
-                buttonText="Login"
-                onSuccess={onSuccess}
-                onFailure={onFailure}
-                cookiePolicy={"single_host_origin"}
-                isSignedIn={true}
-            />  }
-
+                <div className="align-middle mx-auto p-5" id="googleBtn">
+                    { !props.user && <GoogleLogin 
+                        setUser={props.setUser}
+                        clientId={clientId}
+                        buttonText="Login"
+                        onSuccess={onSuccess}
+                        onFailure={onFailure}
+                        cookiePolicy={"single_host_origin"}
+                        isSignedIn={true}
+                        />  }
+                </div>
 
                 {/* Not needed for MVP */}
                 {/* this is will the new user button to trigger the new user routes */}
