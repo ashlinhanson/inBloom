@@ -98,6 +98,7 @@ gsap.from('#plant-cards', {duration: 3, x:300, opacity:0})
 
          <Footer />
       <br /> <br />
+      
       </>
       
     
