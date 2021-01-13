@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+<img src="./client/src/images/inbloom.png">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+:mushroom: [Deployed Link](https://in-bloom.herokuapp.com)
+:mushroom: [Our Repo](https://github.com/ashlinhanson/inBloom)
 
-## Available Scripts
+## 🌿 Purpose:
+It’s always disappointing when you get a plant and think “this is the one that will make it!” and next thing you know, it’s shriveled up and dead. 
 
-In the project directory, you can run:
+inBloom is here to take the stress from plant care so you can enjoy the fruits of your labor.  Sign in with your Google account and start planting your virtual garden. Find information on plants you already have, and research plants you’d like to have to see if your green thumb is advanced enough to care for them.
 
-### `npm start`
+## :mushroom: User Story:
+`As a plant owner, I want to be able to find all the information I need to keep my plants alive and happy(to the best of my ability).`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🌿 Technologies Used:
+* <a href="https://reactjs.org/" title="React"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/react.svg" alt="React" width="21px" height="21px"></a>
+* <a href="https://dev.mysql.com/" title="MySQL"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/mysql.svg" alt="MySQL" width="21px" height="21px"></a>
+* <a href="https://expressjs.com/" title="Express"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/express.svg" alt="Express" width="21px" height="21px"></a>
+* <a href="https://nodejs.org/" title="Node.js"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/nodejs-icon.svg" alt="Node.js" width="21px" height="21px"></a>
+* <a href="https://getbootstrap.com/" title="Bootstrap"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/bootstrap.svg" alt="Bootstrap" width="21px" height="21px"></a>
+* <a href="https://www.adobe.com/products/illustrator.html" title="Adobe Illustrator"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/adobe-illustrator.svg" alt="Adobe Illustrator" width="21px" height="21px"></a>
+* GSAP
+* Trefle API
+  
+## :mushroom: Collaborators:
+* Ashli Hanson 🌿 [GitHub](https://github.com/ashlinhanson)
+* Lili Clift 🌿 [GitHub](https://github.com/LiliCecilia23)
+* Josh Wilson 🌿 [GitHub](https://github.com/josh-wilson6289)
+* Nay Wilkins 🌿 [GitHub](https://github.com/naywilkins512)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🌿 Future Development:
+* Find a better API with complete data and care info
+* Create a water reminder button for each plant to notify when it needs to be watered
+* Link local nurseries for plants and plant care resources/items
+* Create a secondary route for users without a gmail account
+* Search for plants by photo
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
