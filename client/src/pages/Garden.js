@@ -97,7 +97,7 @@ gsap.from('#plant-cards', {duration: 3, x:300, opacity:0})
       </div>
 
          <Footer />
-  
+      <br /> <br />
       </>
       
     
