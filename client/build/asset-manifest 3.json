@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.094e8e44.chunk.css",
+    "main.js": "/static/js/main.be3fad3f.chunk.js",
+    "main.js.map": "/static/js/main.be3fad3f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e3ef4e1f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e3ef4e1f.js.map",
+    "static/css/2.2a86faee.chunk.css": "/static/css/2.2a86faee.chunk.css",
+    "static/js/2.c67f2013.chunk.js": "/static/js/2.c67f2013.chunk.js",
+    "static/js/2.c67f2013.chunk.js.map": "/static/js/2.c67f2013.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.82287ede6255766ba248160203467f90.js": "/precache-manifest.82287ede6255766ba248160203467f90.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.2a86faee.chunk.css.map": "/static/css/2.2a86faee.chunk.css.map",
+    "static/css/main.094e8e44.chunk.css.map": "/static/css/main.094e8e44.chunk.css.map",
+    "static/js/2.c67f2013.chunk.js.LICENSE.txt": "/static/js/2.c67f2013.chunk.js.LICENSE.txt",
+    "static/media/flower.png": "/static/media/flower.7ef5483a.png",
+    "static/media/App.css": "/static/media/inbloom-background-01.16a4601d.png",
+    "static/media/inbloom.png": "/static/media/inbloom.c82f97ad.png",
+    "static/media/leftpalm.svg": "/static/media/leftpalm.0b40382f.svg",
+    "static/media/no-plant.png": "/static/media/no-plant.9e0023e9.png",
+    "static/media/plant1.png": "/static/media/plant1.36c68f8f.png",
+    "static/media/plant2.png": "/static/media/plant2.506a618d.png",
+    "static/media/planty.jpg": "/static/media/planty.4413f528.jpg",
+    "static/media/rightpalm.svg": "/static/media/rightpalm.d27a76c8.svg",
+    "static/media/yourgarden.png": "/static/media/yourgarden.94212cfe.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e3ef4e1f.js",
+    "static/css/2.2a86faee.chunk.css",
+    "static/js/2.c67f2013.chunk.js",
+    "static/css/main.094e8e44.chunk.css",
+    "static/js/main.be3fad3f.chunk.js"
+  ]
+}
