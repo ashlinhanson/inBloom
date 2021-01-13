@@ -125,18 +125,24 @@ height: 200px !important;
   justify-content: center;
 }
 
-#sticky-footer {
-  background-color: #749C75 !important;
-  font-family: 'Coustard', serif;
-}
-
-.footer-text {
-  color: #F8F0D7;
-}
 
 #github-icon {
-  color: #f8F0D7;
+  color: #f8f0d7;
 }
+
+.footer {
+  position: fixed !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 80px !important;
+  background-color: #749C75 !important;
+  color: #f8F0D7;
+  text-align: center !important;
+  font-family: 'Coustard', serif;
+  padding-top: 10px;
+}
+
 
 
 

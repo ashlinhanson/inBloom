@@ -10,8 +10,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 function Footer() {
   return(
   
-  <body className="d-flex flex-column">
-    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div className="footer mt-5">
       <div className="container text-center">
         <div className="row">
         <i class="fab fa-github"></i>
@@ -23,8 +22,8 @@ function Footer() {
         </a>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+
 
   )
 };
