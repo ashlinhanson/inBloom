@@ -14,8 +14,8 @@ function InfoContainer(props) {
             {props.growthform && <li>Growth Form: {props.growthform}</li>}
             {props.growthhabit && <li>Growth Habit: {props.growthhabit}</li>}
             {props.growthrate && <li>Growth Rate: {props.growthrate}</li>}
-            {props.avgheight && <li>Average Height: {props.avgheight}</li>}
-            {props.maxheight && <li>Maximum Height: {props.maxheight}</li>}
+            {props.avgheight && <li>Average Height: {props.avgheight} cm</li>}
+            {props.maxheight && <li>Maximum Height: {props.maxheight} cm</li>}
             {props.toxicity && <li>Toxicity: {props.toxicity}</li>}
           </ul>
         </div>
