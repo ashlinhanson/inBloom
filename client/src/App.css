@@ -387,3 +387,11 @@ height: 200px !important;
 #googleBtn {
   width: fit-content !important;
 }
+
+#back-to-garden-btn {
+  font-family: 'Coustard', serif;
+  font-size: 15px;
+  border-radius: 20px !important;
+  color: #749C75 !important;
+  border: 3px solid #749C75 !important;
+}
