@@ -125,6 +125,18 @@ height: 200px !important;
   justify-content: center;
 }
 
+#sticky-footer {
+  background-color: #749C75 !important;
+  font-family: 'Coustard', serif;
+}
+
+.footer-text {
+  color: #F8F0D7;
+}
+
+#github-icon {
+  color: #f8F0D7;
+}
 
 
 
