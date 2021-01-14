@@ -4,11 +4,11 @@ import "../App.css";
 
 function DeleteBtn(props) {
   
-  const [buttonMsg, setButtonMsg] = React.useState("Delete");
+  const [buttonMsg, setButtonMsg] = React.useState("Remove");
 
   function onClick() {  
     API.deletePlant(props.plant.id).then(res => {
-      setButtonMsg("Successfully Deleted");
+      setButtonMsg("Successfully Removed!");
       // console.log(handleGetPlants(props.user.id));
         setTimeout(function removeFromGarden()
         {
