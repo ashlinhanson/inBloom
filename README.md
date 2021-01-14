@@ -1,6 +1,7 @@
 <img src="./client/src/images/inbloom.png">
 
 :mushroom: [Deployed Link](https://in-bloom.herokuapp.com)
+
 :mushroom: [Our Repo](https://github.com/ashlinhanson/inBloom)
 
 ## 🌿 Purpose:
@@ -12,20 +13,22 @@ inBloom is here to take the stress from plant care so you can enjoy the fruits o
 `As a plant owner, I want to be able to find all the information I need to keep my plants alive and happy(to the best of my ability).`
 
 ## 🌿 Technologies Used:
-* <a href="https://reactjs.org/" title="React"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/react.svg" alt="React" width="21px" height="21px"></a>
-* <a href="https://dev.mysql.com/" title="MySQL"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/mysql.svg" alt="MySQL" width="21px" height="21px"></a>
-* <a href="https://expressjs.com/" title="Express"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/express.svg" alt="Express" width="21px" height="21px"></a>
-* <a href="https://nodejs.org/" title="Node.js"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/nodejs-icon.svg" alt="Node.js" width="21px" height="21px"></a>
-* <a href="https://getbootstrap.com/" title="Bootstrap"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/bootstrap.svg" alt="Bootstrap" width="21px" height="21px"></a>
-* <a href="https://www.adobe.com/products/illustrator.html" title="Adobe Illustrator"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/adobe-illustrator.svg" alt="Adobe Illustrator" width="21px" height="21px"></a>
+* <a href="https://reactjs.org/" title="React"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/react.svg" alt="React" width="21px" height="21px"> React</a>
+* <a href="https://dev.mysql.com/" title="MySQL"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/mysql.svg" alt="MySQL" width="21px" height="21px"> MySQL</a>
+* <a href="https://expressjs.com/" title="Express"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/express.svg" alt="Express" width="21px" height="21px"> Express</a>
+* <a href="https://nodejs.org/" title="Node.js"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/nodejs-icon.svg" alt="Node.js" width="21px" height="21px"> Node.js</a>
+* <a href="https://getbootstrap.com/" title="Bootstrap"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/bootstrap.svg" alt="Bootstrap" width="21px" height="21px"> Bootstrap</a>
+* <a href="https://www.adobe.com/products/illustrator.html" title="Adobe Illustrator"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/adobe-illustrator.svg" alt="Adobe Illustrator" width="21px" height="21px"> Adobe Illustrator</a>
 * GSAP
 * Trefle API
-  
-## :mushroom: Collaborators:
-* Ashli Hanson 🌿 [GitHub](https://github.com/ashlinhanson)
-* Lili Clift 🌿 [GitHub](https://github.com/LiliCecilia23)
-* Josh Wilson 🌿 [GitHub](https://github.com/josh-wilson6289)
-* Nay Wilkins 🌿 [GitHub](https://github.com/naywilkins512)
+
+## :mushroom: Site Features:
+🌿 Landing Page 🌿 
+<img src="./client/src/images/home.png">
+🌿 Garden Page 🌿
+<img src="./client/src/images/garden.png">
+🌿 Plant Data 🌿
+<img src="./client/src/images/modal.png">
 
 ## 🌿 Future Development:
 * Find a better API with complete data and care info
@@ -33,5 +36,14 @@ inBloom is here to take the stress from plant care so you can enjoy the fruits o
 * Link local nurseries for plants and plant care resources/items
 * Create a secondary route for users without a gmail account
 * Search for plants by photo
+
+## :mushroom: Collaborators:
+* Ashli Hanson 🌿 [GitHub](https://github.com/ashlinhanson)
+* Lili Clift 🌿 [GitHub](https://github.com/LiliCecilia23)
+* Josh Wilson 🌿 [GitHub](https://github.com/josh-wilson6289)
+* Nay Wilkins 🌿 [GitHub](https://github.com/naywilkins512)
+
+## 🌿 License:
+Copyright (c) 2020 Ashli Hanson Licensed under the MIT license.
 
 
