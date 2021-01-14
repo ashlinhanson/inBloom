@@ -3,7 +3,7 @@ import API from "../utils/API";
 import "../App.css";
 
 function AddPlantBtn(props) {
-    const [buttonMsg, setButtonMsg] = React.useState("Add to Your Garden");
+    const [buttonMsg, setButtonMsg] = React.useState("Plant it!");
 
     let data = {
         common_name: props.displayname,
@@ -25,10 +25,10 @@ function AddPlantBtn(props) {
             props.setModalShow && props.setModalShow(false)
             // we should add a toast or popup to show that the plant was added to the user's garden
         })
-        setButtonMsg("Added Successfully!")
+        setButtonMsg("Successfully Planted!")
 
     };
-      
+    
     return (
         <div>
             <button className="Btn btn sublead" onClick={() => onClick()} >{buttonMsg}</button>

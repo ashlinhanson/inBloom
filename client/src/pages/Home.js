@@ -8,6 +8,7 @@ import plant1 from '../images/plant1.png';
 import plant2 from '../images/plant2.png';
 import flower from '../images/flower.png';
 import Palms from '../components/Palms';
+import Footer from "../components/Footer";
 
 const clientId = "21199057526-pc5p89vu1fos35ufcd9m597mmd84aq88.apps.googleusercontent.com";
 
@@ -81,7 +82,9 @@ function Home(props) {
 
 
             </div>
+            {/* <Footer /> */}
         </div>
+        
     )
 }
 

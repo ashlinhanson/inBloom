@@ -5,6 +5,7 @@ import SearchCard from "../components/SearchCard";
 import GardenCard from "../components/GardenCard";
 import yourgarden from "../images/yourgarden.png";
 import API from "../utils/API";
+import Footer from "../components/Footer";
 
 function Garden(props) {
 
@@ -51,6 +52,7 @@ gsap.from('#plant-cards', {duration: 3, x:300, opacity:0})
 
 
    return (
+      <>
       <div className="garden-body">
          <div className="jumbotron garden-jumbo">
             <img className="gardenHeader" src={yourgarden}></img>
@@ -92,8 +94,14 @@ gsap.from('#plant-cards', {duration: 3, x:300, opacity:0})
                />
             ))}
          </div>
-         
       </div>
+
+         <Footer />
+      <br /> <br />
+      
+      </>
+      
+    
    )
 
 };
