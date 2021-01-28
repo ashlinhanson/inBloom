@@ -1,6 +1,6 @@
 <img src="./client/src/images/inbloom.png">
 
-:mushroom: [Check it out!](https://in-bloom.herokuapp.com)
+** :mushroom: [Check it out!](https://in-bloom.herokuapp.com)
 
 
 ## 🌿 Usage Instructions:
