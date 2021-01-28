@@ -4,13 +4,57 @@
 
 :mushroom: [Our Repo](https://github.com/ashlinhanson/inBloom)
 
-## 🌿 Purpose:
-It’s always disappointing when you get a plant and think “this is the one that will make it!” and next thing you know, it’s shriveled up and dead. 
+## 🌿 Usage Instructions:
+### Getting Started
+From our home page, log in with your Google account. You will then be taken to the garden page. 
 
-inBloom is here to take the stress from plant care so you can enjoy the fruits of your labor.  Sign in with your Google account and start planting your virtual garden. Find information on plants you already have, and research plants you’d like to have to see if your green thumb is advanced enough to care for them.
+### Growing your Garden
+To add plants to your garden, start typing the name of the desired plant in the search bar on the right side of the screen. Search results will populate, add plants directly from those results with the `plant it!` button, or find out more information on each plant with the `more info` button. You can also add the plant from within the modal that populates when the `more info` button is selected. From here, you can add more plants by repeating this process, or you can navigate back to your garden by selecting the `back to garden` button on the top left of the navigation bar. Now you will be able to see all the plants you have added to your garden!
 
-## :mushroom: User Story:
-`As a plant owner, I want to be able to find all the information I need to keep my plants alive and happy(to the best of my ability).`
+### Deleting Plants
+To delete a plant, select the `delete plant` button on the plant you'd like to delete. The page will automatically re-render with your updated garden.
+
+### Logging Out
+To logout from your inBloom profile, click the Google Logout button on the top right side of the navbar.
+
+## :mushroom: Installation Instructions:
+### Prerequisite
+**You will need to have MySQL installed on your machine to use this locally**
+````
+https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/installing.html
+````
+Once you've ensured that MySQL is installed, you will need to clone the repository to your local machine
+
+````
+git clone https://github.com/ashlinhanson/inBloom.git
+````
+
+Then you will need to install the dependencies needed to run the application
+````
+npm install
+````
+and add your password to config.json.
+````
+"username": "root",
+"password": "",
+````
+Then open your MySQL WorkBench (or chosen SQL tool) and run the command
+```
+CREATE DATABASE in_bloom;
+```
+and finally run in the command line
+````
+npm start
+````
+and it open the browser to run the application
+
+## :mushroom: Site Features:
+🌿 Landing Page 🌿 
+<img src="./client/src/images/home.png">
+🌿 Garden Page 🌿
+<img src="./client/src/images/garden.png">
+🌿 Plant Data 🌿
+<img src="./client/src/images/modal.png">
 
 ## 🌿 Technologies Used:
 <a href="https://reactjs.org/" title="React"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/react.svg" alt="React" width="21px" height="21px"> React</a>
@@ -21,14 +65,6 @@ inBloom is here to take the stress from plant care so you can enjoy the fruits o
 <a href="https://www.adobe.com/products/illustrator.html" title="Adobe Illustrator"><img src="https://github.com/tomchen/stack-icons/blob/master/logos/adobe-illustrator.svg" alt="Adobe Illustrator" width="21px" height="21px"> Adobe Illustrator</a>
 * GSAP
 * Trefle API
-
-## :mushroom: Site Features:
-🌿 Landing Page 🌿 
-<img src="./client/src/images/home.png">
-🌿 Garden Page 🌿
-<img src="./client/src/images/garden.png">
-🌿 Plant Data 🌿
-<img src="./client/src/images/modal.png">
 
 ## 🌿 Future Development:
 * Find a better API with complete data and care info
