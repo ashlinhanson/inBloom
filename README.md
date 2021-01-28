@@ -1,8 +1,7 @@
 <img src="./client/src/images/inbloom.png">
 
-:mushroom: [Deployed Link](https://in-bloom.herokuapp.com)
+:mushroom: [Check it out!](https://in-bloom.herokuapp.com)
 
-:mushroom: [Our Repo](https://github.com/ashlinhanson/inBloom)
 
 ## 🌿 Usage Instructions:
 ### Getting Started
