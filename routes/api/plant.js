@@ -6,6 +6,8 @@ router.route("/")
 
 router.route("/:id")
   .get(plantsController.findById)
-  .delete(plantsController.remove);
+  .delete(plantsController.remove)
+  .put(plantsController.update);
+  
   
   module.exports = router;
