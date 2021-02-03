@@ -6,9 +6,44 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: DataTypes.UUIDV1,
       primaryKey: true
     },
+    nickname: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        len: [1]
+      }
+    },
     common_name: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    water: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        len: [1]
+      }
+    },
+    growth: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        len: [1]
+      }
+    },
+    soil: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        len: [1]
+      }
+    },
+    light: {
+      type: DataTypes.STRING,
+      allowNull: true,
       validate: {
         len: [1]
       }
