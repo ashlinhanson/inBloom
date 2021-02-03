@@ -111,29 +111,6 @@ function PlantInfo(props) {
           img={props.img}
           plant={props.plantres}
           userId={props.user}
-          // phmax={props.plantres.data.main_species.growth.ph_maximum}
-          // phmin={props.plantres.data.main_species.growth.ph_minimum}
-          // bloommonths={props.plantres.data.main_species.growth.bloom_months}
-          // light={props.plantres.data.main_species.growth.light}
-          // growthmonths={props.plantres.data.main_species.growth.growth_months}
-          // humidity={
-          //   props.plantres.data.main_species.growth.atmospheric_humidity
-          // }
-          // minwater={
-          //   props.plantres.data.main_species.growth.minimum_precipitation.mm
-          // }
-          // maxwater={
-          //   props.plantres.data.main_species.growth.maximum_precipitation.mm
-          // }
-          // rootdepth={props.plantres.data.main_species.growth.minimum_root_depth.cm}
-          // mintemp={props.plantres.data.main_species.growth.minimum_temperature.deg_f}
-          // maxtemp={props.plantres.data.main_species.growth.maximum_temperature.deg_f}
-          // soilnutriments={
-          //   props.plantres.data.main_species.growth.soil_nutriments
-          // }
-          // soilsalinity={props.plantres.data.main_species.growth.soil_salinity}
-          // soiltexture={props.plantres.data.main_species.growth.soil_texture}
-          // soilhumidity={props.plantres.data.main_species.growth.soil_humidity}
           />
         }
       </Modal.Footer>

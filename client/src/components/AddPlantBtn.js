@@ -31,14 +31,10 @@ const AddPlantBtn = (props) => {
             }
            
             API.addPlant(data).then(res=>{
-                // console.log(res.data.common_name + " added to your garden!");
-                // console.log(data);
-    
+
                  //updates state of garden and rerenders saved plants
     
                 props.setGarden(oldGarden => {return[...oldGarden, data]});
-    
-    
     
                 props.setModalShow && props.setModalShow(false)
                 // we should add a toast or popup to show that the plant was added to the user's garden

@@ -31,7 +31,7 @@ module.exports = {
         if (!dbModel) {
           throw new Error ("Not able to update")
         }
-
+        
         let values = {
           registered: true,
           nickname: req.body.nickname,
