@@ -20,28 +20,67 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    water: {
-      type: DataTypes.STRING,
+    phmin: {
+      type: DataTypes.DECIMAL,
       allowNull: true,
-      validate: {
-        len: [1]
-      }
     },
-    growth: {
-      type: DataTypes.STRING,
+    phmax: {
+      type: DataTypes.DECIMAL,
       allowNull: true,
-      validate: {
-        len: [1]
-      }
-    },
-    soil: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      validate: {
-        len: [1]
-      }
     },
     light: {
+      type: DataTypes.DECIMAL,
+      allowNull: true,
+    },
+    bloommonths: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    growthmonths: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    humidity: {
+      type: DataTypes.DECIMAL,
+      allowNull: true,
+    },
+    minwater: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    maxwater: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    rootdepth: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    mintemp: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    maxtemp: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    soilnutriments: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    soilsalinity: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    soiltexture: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    soilhumidity: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    growth: {
       type: DataTypes.STRING,
       allowNull: true,
       validate: {

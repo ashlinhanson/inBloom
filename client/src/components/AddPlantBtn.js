@@ -16,6 +16,7 @@ function AddPlantBtn(props) {
     function onClick () {
         API.addPlant(data).then(res=>{
             console.log(res.data.common_name + " added to your garden!");
+            console.log(data);
 
              //updates state of garden and rerenders saved plants
 
