@@ -7,6 +7,7 @@ function AddPlantBtn(props) {
 
     let data = {
         common_name: props.displayname,
+        nickname: props.displayname,
         image_url: props.img,
         trefle_id: props.plantid,
         UserId: props.userId
