@@ -16,7 +16,7 @@ export default {
   addPlant: function (plantData) {
     return axios.post("/api/plant", plantData);
   },
-
+  
   // post request using userData from google
   signInUser: function (userData) {
     return axios.post("/api/user", userData)
