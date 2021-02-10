@@ -78,7 +78,6 @@ gsap.from('#plant-cards', {duration: 3, x:300, opacity:0})
                   plant={result} 
                   user={props.user.id} 
                   userGarden={userGarden} 
-                  plantid={result.id}
                />
                   
             ))}

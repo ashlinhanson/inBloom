@@ -2,7 +2,6 @@ import React from "react";
 import MoreInfoBtn from "./MoreInfoBtn";
 import AddPlantBtn from "./AddPlantBtn";
 import fakeImg from "../images/no-plant.png";
-import API from "../utils/API";
 
 function SearchCard(props) {
   let displayname;
@@ -20,7 +19,6 @@ function SearchCard(props) {
     img = props.plant.image_url;
   }
   
-
   return (
     <div id="search-card"
       className="card m-2 p-2"

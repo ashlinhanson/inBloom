@@ -110,8 +110,7 @@ function PlantInfo(props) {
           displayname={props.displayname}
           img={props.img}
           plant={props.plantres}
-          userId={props.user}
-          />
+          userId={props.user}/>
         }
       </Modal.Footer>
     </Modal>
